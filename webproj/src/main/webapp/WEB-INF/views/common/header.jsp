@@ -53,11 +53,13 @@
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <ul id="top_links">
                         <li>
+                        
+                        	<form action="${pageContext.request.contextPath}/user/login.do" method="POST" class="form-signin">
                             <div class="dropdown dropdown-access">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="access_link">Login</a>
+                                
+                             
                                 <div class="dropdown-menu">
-
-
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="inputUsernameEmail" placeholder="ID">
                                     </div>
@@ -65,10 +67,14 @@
                                         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                                     </div>
                                     <a id="forgot_pw" href="#">비밀번호 찾기</a>
-                                    <a id="Sign_in" value="Sign in"  type="submit" href="index.jsp" class="button_drop outline">로그인</a>
-                                    <a id="Sign_up" value="Sign up"  type="submit" href="join.jsp" class="button_drop outline">회원가입</a>
+                                    <!-- <a id="Sign_in" type="submit" href="index.jsp" class="button_drop outline">로그인</a> -->
+                                    <button class="button_drop outline" type="submit">로그인</button>
+                                    <a id="Sign_up" type="submit" href="join.jsp" class="button_drop outline">회원가입</a>
                                 </div>
+                                
                             </div><!-- End Dropdown access -->
+                            
+                            </form>
                         </li>
                         <li><a href="wishlist.html" id="wishlist_link">즐겨찾기</a></li>
                     </ul>

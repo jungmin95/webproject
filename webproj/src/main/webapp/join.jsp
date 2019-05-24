@@ -184,7 +184,7 @@
                                         <input type="int" name="user_age" value="" placeholder="ex ) 20세 -> 20" class="form-control">
                                     </div>
                                 </div>
-                                <a href="index.html" class="btn_1 outline">완료</a>
+                                <a href="join.do" class="btn_1 outline" type="submit">완료</a>
                             </form>
                         </div>
                     </div>

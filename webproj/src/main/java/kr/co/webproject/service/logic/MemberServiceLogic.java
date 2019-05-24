@@ -13,6 +13,7 @@ public class MemberServiceLogic implements MemberService{
 	@Autowired
 	private MemberStore store;
 
+	@Override
 	public User login(User user) {
 		//
 		User readedUser = null;
