@@ -64,9 +64,9 @@
                                     <div class="form-group">
                                         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                                     </div>
-                                    <a id="forgot_pw" href="#">Forgot password?</a>
-                                    <input type="submit" name="Sign_in" value="Sign in" id="Sign_in" class="button_drop">
-                                    <input type="submit" name="Sign_up" value="Sign up" id="Sign_up" class="button_drop outline">
+                                    <a id="forgot_pw" href="#">비밀번호 찾기</a>
+                                    <a id="Sign_in" value="Sign in"  type="submit" href="index.html" class="button_drop outline">로그인</a>
+                                    <a id="Sign_up" value="Sign up"  type="submit" href="join.html" class="button_drop outline">회원가입</a>
                                 </div>
                             </div><!-- End Dropdown access -->
                         </li>
