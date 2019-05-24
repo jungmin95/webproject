@@ -65,8 +65,8 @@
                                         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                                     </div>
                                     <a id="forgot_pw" href="#">비밀번호 찾기</a>
-                                    <a id="Sign_in" value="Sign in"  type="submit" href="index.html" class="button_drop outline">로그인</a>
-                                    <a id="Sign_up" value="Sign up"  type="submit" href="join.html" class="button_drop outline">회원가입</a>
+                                    <a id="Sign_in" value="Sign in"  type="submit" href="index.jsp" class="button_drop outline">로그인</a>
+                                    <a id="Sign_up" value="Sign up"  type="submit" href="join.jsp" class="button_drop outline">회원가입</a>
                                 </div>
                             </div><!-- End Dropdown access -->
                         </li>
