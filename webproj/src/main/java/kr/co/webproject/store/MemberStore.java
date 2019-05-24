@@ -1,5 +1,10 @@
 package kr.co.webproject.store;
 
-public interface MemberStore {
+import kr.co.webproject.domain.User;
+
+public interface MemberStore{
+	
+	boolean create(User user);
+	User read(String id);
 
 }
