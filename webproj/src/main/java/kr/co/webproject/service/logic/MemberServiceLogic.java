@@ -1,40 +1,32 @@
 package kr.co.webproject.service.logic;
 
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import kr.co.webproject.domain.User;
 import kr.co.webproject.service.MemberService;
+import kr.co.webproject.store.MemberStore;
 
+
+@Service
 public class MemberServiceLogic implements MemberService{
 
 	@Override
-	public void check_id(String id, HttpServletResponse response) throws Exception {
+	public User login(User user) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public void check_pw(String pw, HttpServletResponse response) throws Exception {
+	public boolean register(User user) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 	@Override
-	public void check_email(String email, HttpServletResponse response) throws Exception {
+	public User find(String loginId) {
 		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public int check_sex(String sex, HttpServletResponse response) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int check_age(User age, HttpServletResponse response) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 }

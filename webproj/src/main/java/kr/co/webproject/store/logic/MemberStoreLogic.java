@@ -36,14 +36,7 @@ public class MemberStoreLogic implements MemberStore{
 			psmt.setString(2, user.getPw());
 			psmt.setString(3, user.getName());
 			psmt.setInt(4, user.getSex());
-			psmt.setInt(4, user.getAge());
-
-			/*
-			 * user.setId(rs.getString(1)); user.setPw(rs.getString(2));
-			 * user.setName(rs.getString(3)); user.setAge(rs.getInt(4));
-			 * user.setSex(rs.getInt(5));
-			 */
-			
+			psmt.setInt(5, user.getAge());
 			
 			createdCount = psmt.executeUpdate();
 
