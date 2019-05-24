@@ -462,9 +462,9 @@
 						Web Project
 					</p>
 					<ul class="list_order">
-						<li><span>1</span>백석대학교</li>
-						<li><span>2</span>Link +</li>
-						<li><span>3</span>Web Project</li>
+						<li><span>1 </span>백석대학교</li>
+						<li><span>2 </span>Link +</li>
+						<li><span>3 </span>Web Project</li>
 					</ul>
 				</div>
 			</div>
