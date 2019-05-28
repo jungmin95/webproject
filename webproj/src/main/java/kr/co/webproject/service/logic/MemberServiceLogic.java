@@ -52,4 +52,7 @@ public class MemberServiceLogic implements MemberService{
 		return true;
 	}
 
+
+
+
 }

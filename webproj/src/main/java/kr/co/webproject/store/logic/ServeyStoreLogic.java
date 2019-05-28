@@ -10,7 +10,8 @@ import org.springframework.stereotype.Repository;
 import kr.co.webproject.domain.Servey;
 import kr.co.webproject.store.ServeyStore;
 import kr.co.webproject.store.factory.ConnectionFactory;
-import kr.co.webproject.store.logic.utill.JdbcUtils;
+import kr.co.webproject.store.factory.JdbcUtils;
+
 
 
 @Repository
@@ -51,7 +52,7 @@ public class ServeyStoreLogic implements ServeyStore {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		} finally {
-			JdbcUtils.close(psmt, conn);
+			JdbcUtils.Close(psmt, conn);
 			num++;
 		}
 
@@ -88,10 +89,11 @@ public class ServeyStoreLogic implements ServeyStore {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		} finally {
-			JdbcUtils.close(rs, psmt, conn);
+			JdbcUtils.Close(rs, psmt, conn);
 		}
 
 		return servey;
 	}
+
 
 }
