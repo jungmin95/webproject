@@ -43,7 +43,24 @@
 		left: 80%;
 	}
 }
+
+.header.sticky {
+box-shadow: 0px 2px 10px -2px;
+rgba: (0, 0, 0, 0.41);
+background-color: #000000;
+padding-bottom: 0;
+ }
+.main-menu > ul > li > a {
+padding: 0 8px 15px 8px;
+font-size: 13px;
+color: #fff;
+
+}
+.sticky .main-menu > ul > li > a {
+color: #fff;
+}
 </style>
+
 <header>
     <div id="top_line">
         <div class="container">
@@ -53,28 +70,22 @@
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <ul id="top_links">
                         <li>
-                        
-                        	<form action="${pageContext.request.contextPath}/user/login.do" method="POST" class="form-signin">
                             <div class="dropdown dropdown-access">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="access_link">Login</a>
-                                
-                             
                                 <div class="dropdown-menu">
+
+
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="inputUsernameEmail" placeholder="ID">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                                     </div>
-                                    <a id="forgot_pw" href="#">비밀번호 찾기</a>
-                                    <!-- <a id="Sign_in" type="submit" href="index.jsp" class="button_drop outline">로그인</a> -->
-                                    <button class="button_drop outline" type="submit">로그인</button>
-                                    <a id="Sign_up" type="submit" href="join.jsp" class="button_drop outline">회원가입</a>
+                                    <a id="forgot_pw" href="#">Forgot password?</a>
+                                    <input type="submit" name="Sign_in" value="Sign in" id="Sign_in" class="button_drop">
+                                    <input type="submit" name="Sign_up" value="Sign up" id="Sign_up" class="button_drop outline">
                                 </div>
-                                
                             </div><!-- End Dropdown access -->
-                            
-                            </form>
                         </li>
                         <li><a href="wishlist.html" id="wishlist_link">즐겨찾기</a></li>
                     </ul>

@@ -16,7 +16,7 @@
                             <li><a href="#"><i class="icon-youtube-play"></i></a></li>
                             <li><a href="#"><i class="icon-linkedin"></i></a></li>
                         </ul>
-                        <p>© Citytours 2015</p>
+                        <p>2019-1 WebProject</p>
                     </div>
                 </div>
             </div><!-- End row -->
