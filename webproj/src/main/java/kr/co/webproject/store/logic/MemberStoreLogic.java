@@ -12,6 +12,8 @@ import kr.co.webproject.store.MemberStore;
 import kr.co.webproject.store.factory.ConnectionFactory;
 import kr.co.webproject.store.factory.JdbcUtils;
 
+
+
 @Repository
 public class MemberStoreLogic implements MemberStore{
 
@@ -83,5 +85,7 @@ public class MemberStoreLogic implements MemberStore{
 		}
 		return user;
 	}
+
+
 
 }
