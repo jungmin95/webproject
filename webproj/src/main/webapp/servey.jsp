@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <!--[if IE 8]><html class="ie ie8"> <![endif]-->
@@ -21,10 +23,10 @@
     <link href="css/base.css" rel="stylesheet">
 
     <!-- REVOLUTION SLIDER CSS -->
-    <link href="rs-plugin/css/settings.css" rel="stylesheet">
-    <link href="css/extralayers.css" rel="stylesheet">
+    <link href="resources/rs-plugin/css/settings.css" rel="stylesheet">
+    <link href="resources/css/extralayers.css" rel="stylesheet">
 
-    <link href="css/tabs_home.css" rel="stylesheet">
+    <link href="resources/css/tabs_home.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.min.js"></script>
@@ -97,7 +99,7 @@
             <div class="col-md-3 col-sm-3 col-xs-3">
 
 
-                <h1><a href="index.html"></a></h1> <!--사이트 로고-->
+                <h1><a href="index.jsp"></a></h1> <!--사이트 로고-->
 
             </div>
             <nav class="col-md-9 col-sm-9 col-xs-9">
@@ -306,7 +308,7 @@
                 <!-- SLIDE  -->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
                     <!-- MAIN IMAGE -->
-                    <img src="img/slides/제주도.jpg" class="ls-bg" alt="Slide background">
+                    <img src="resources/img/slides/jejudo.jpg" class="ls-bg" alt="Slide background">
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption white_heavy_40 customin customout text-center text-uppercase" data-x="center" data-y="center" data-hoffset="0" data-voffset="-20" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="1000" data-start="1700" data-easing="Back.easeInOut" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
                         제주도
@@ -321,7 +323,7 @@
                 <!-- SLIDE  -->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
                     <!-- MAIN IMAGE -->
-                    <img src="img/slides/보성.jpg" class="ls-bg" alt="Slide background">
+                    <img src="resources/img/slides/bosung.jpg" class="ls-bg" alt="Slide background">
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption white_heavy_40 customin customout text-center text-uppercase" data-x="center" data-y="center" data-hoffset="0" data-voffset="-20" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="1000" data-start="1700" data-easing="Back.easeInOut" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
                         보성
@@ -337,7 +339,7 @@
                 <!-- SLIDE  -->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
                     <!-- MAIN IMAGE -->
-                    <img src="img/slides/여수.jpg" class="ls-bg" alt="Slide background">
+                    <img src="resources/img/slides/yusoo.jpg" class="ls-bg" alt="Slide background">
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption white_heavy_40 customin customout text-center text-uppercase" data-x="center" data-y="center" data-hoffset="0" data-voffset="-20" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="1000" data-start="1700" data-easing="Back.easeInOut" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
                         여수</div>>
@@ -352,7 +354,7 @@
                 <!-- SLIDE  -->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
                     <!-- MAIN IMAGE -->
-                    <img src="img/slides/경복궁.jpg" class="ls-bg" alt="Slide background">
+                    <img src="resources/img/slides/kyungbok.jpg" class="ls-bg" alt="Slide background">
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption white_heavy_40 customin customout text-center text-uppercase" data-x="center" data-y="center" data-hoffset="0" data-voffset="-20" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="1000" data-start="1700" data-easing="Back.easeInOut" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
                         서울
@@ -372,6 +374,7 @@
     <!-- End Slider -->
 	
 	<!-- Question -->
+	<!-- <form:form commandName="servey"> -->
 	<div class="container margin_60">
 		<div class="main_title">
 	    	 <h2>여행 취향 <span>TEST</span></h2>
@@ -379,7 +382,7 @@
 	    
 		<article class="feature">
 			<div class="col-md-5">
-				<img src="img/me.jpg" class="img-responsive" alt="">
+				<img src="resources/img/me.jpg" class="img-responsive" alt="">
           	</div>
 			<div class="content">
 				<h3>나는 어떤 사람일까?</h3>
@@ -388,18 +391,20 @@
 					<input id="r1_2" name="r1" type="radio" value="2">나는 흥미진진한 사람이다<p>
 					<input id="r1_3" name="r1" type="radio" value="3">나는 도전적인 사람이다<p>
 					<input id="r1_4" name="r1" type="radio" value="4">나는 진지한 사람이다<p>
+				
+					<!-- <form:radiobuttons path="r1" items="${servey.r1s }"/> -->
 				<p>
 			</div>
 		</article>
 		<article class="feature right">
 			<div class="col-md-5">
-				<img src="img/paragliding.jpg" class="img-responsive" alt="" />
+				<img src="resources/img/paragliding.jpg" class="img-responsive" alt="" />
 			</div>
 			<div class="content">
 				<h3>패러글라이딩 기회가 주어진다면?</h3>
 				<p><br>
-				<input id="r2_1" name="r2" type="radio" value="1">도전해본다<p>
-				<input id="r2_2" name="r2" type="radio" value="2">다음 기회에<p>
+					<input id="r2_1" name="r2" type="radio" value="1">도전해본다<p>
+					<input id="r2_2" name="r2" type="radio" value="2">다음 기회에<p>				
 				<p><br><br><br><br>
 			</div>
 		</article>
@@ -409,12 +414,12 @@
 				<h3>여행을 가서 2시간 자유시간이 주어진다면?</h3>
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/wine.jpg" class="img-responsive" align="middle" />
+				<br><img src="resources/img/wine.jpg" class="img-responsive" align="middle" />
 				<input id="r3_1" name="r3" type="radio" value="1">와인 한잔<p>
 				
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/sunset.jpg" class="img-responsive" />
+				<br><img src="resources/img/sunset.jpg" class="img-responsive" />
 				<input id="r3_2" name="r3" type="radio" value="2">석양 보기<p>
 				
 			</div>
@@ -428,12 +433,12 @@
 				<h3>바다에 가면 나는?</h3>
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/surfboard.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/surfboard.jpg" class="img-responsive" alt="" />
 				<input id="r4_1" name="r4" type="radio" value="1">서핑<p>
 				
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/beach.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/beach.jpg" class="img-responsive" alt="" />
 				<input id="r4_2" name="r4" type="radio" value="2">휴식<p>
 				
 			</div>
@@ -447,12 +452,12 @@
 				<h3>지금 당장 하루의 휴가가 주어진다면 어디로?</h3>
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/art.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/art.jpg" class="img-responsive" alt="" />
 				<input id="r5_1" name="r5" type="radio" value="1">박물관<p>
 				
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/city.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/city.jpg" class="img-responsive" alt="" />
 				<input id="r5_2" name="r5" type="radio" value="2">도심<p>
 				
 			</div>
@@ -466,12 +471,12 @@
 				<h3>당신이 즐겨 찍는 사진은?</h3>
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/food.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/food.jpg" class="img-responsive" alt="" />
 				<input id="r6_1" name="r6" type="radio" value="1">음식<p>
 				
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/photo.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/photo.jpg" class="img-responsive" alt="" />
 				<input id="r6_2" name="r6" type="radio" value="2">풍경<p>
 				
 			</div>
@@ -485,12 +490,12 @@
 				<h3>친구와 함께하는 여행 컨셉은?</h3>
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/healing.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/healing.jpg" class="img-responsive" alt="" />
 				<input id="r7_1" name="r7" type="radio" value="1">힐링<p>
 				
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/party.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/party.jpg" class="img-responsive" alt="" />
 				<input id="r7_2" name="r7" type="radio" value="2">파티<p>
 				
 			</div>
@@ -505,12 +510,12 @@
 				<h3>여행 지역에서 반드시 경험해야 하는 것?</h3>
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/history.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/history.jpg" class="img-responsive" alt="" />
 				<input id="r8_1" name="r8" type="radio" value="1">역사<p>
 				
 			</div>
 			<div class="col-md-5">
-				<br><img src="img/food2.jpg" class="img-responsive" alt="" />
+				<br><img src="resources/img/food2.jpg" class="img-responsive" alt="" />
 				<input id="r8_2" name="r8" type="radio" value="2">맛집<p>
 				
 			</div>
@@ -520,11 +525,11 @@
 		</article>
 		
 		<p class="text-center add_bottom_30">
-			<a href="index.html" class="btn_1 medium">작성완료 </a>
+			<a href="option.do" class="btn_1 medium">작성완료 </a>
 		</p>
 		
-		</div>
-	
+	</div>
+	<!-- </form:form> -->
 	
     <div class="container margin_60">
 
@@ -573,7 +578,7 @@
                 </p>
                 <ul class="list_order">
                     <li><span>1</span>백석대학교</li>
-                    <li><span>2</span>Link +</li>
+                    <li><span>2</span>Linc +</li>
                     <li><span>3</span>Web Project</li>
                 </ul>
             </div>
