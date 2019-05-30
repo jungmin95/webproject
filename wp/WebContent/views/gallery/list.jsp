@@ -1,4 +1,3 @@
-/*
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -16,11 +15,19 @@
 	<table>
 		<c:forEach var="tour" items="${list }">
 		<tr>
-		<td>
-			${tour.tourlistId }
-		</td>
+			<td>
+				${tour.tourlistId }
+			</td>
+			<td>
+			<a href="${path }/${tour.tourlistId}">
+				<img src="${path}/images/${tour.tourlistUrl}" width="120px" height="100px">
+			</a>
+			</td>
+			<td>
+			<a href="${path }/${tour.tourlistId}">${tour.tourlistName }</a>
+			</td>
+		</tr>
 		</c:forEach>
 	</table>
 </body>
 </html>
-*/
