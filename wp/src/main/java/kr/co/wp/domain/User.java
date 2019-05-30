@@ -4,12 +4,12 @@ public class User {
 	private String id;
 	private String pw;
 	private String name;
-	private int sex;
-	private int age;
+	private String sex;
+	private Integer age;
 	
 	public User() {}
 	
-	public User(String id, String pw, String name, int sex, int age) {
+	public User(String id, String pw, String name, String sex, Integer age) {
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
@@ -35,16 +35,16 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getSex() {
+	public String getSex() {
 		return sex;
 	}
-	public void setSex(int sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 }

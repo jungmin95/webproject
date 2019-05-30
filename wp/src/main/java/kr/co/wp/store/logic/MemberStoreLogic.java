@@ -36,7 +36,7 @@ public class MemberStoreLogic implements MemberStore{
 			psmt.setString(1, user.getId());
 			psmt.setString(2, user.getPw());
 			psmt.setString(3, user.getName());
-			psmt.setInt(4, user.getSex());
+			psmt.setString(4, user.getSex());
 			psmt.setInt(5, user.getAge());
 	
 			createdCount = psmt.executeUpdate();
@@ -53,7 +53,7 @@ public class MemberStoreLogic implements MemberStore{
 	@Override
 	public User read(String id) {
 
-		String sql = "SELECT user_id, user_pw, user_name, user_age, user_sex FROM PROJECT_USER WHERE user_id = ?";
+		String sql = "SELECT user_id, user_pw, user_name, user_sex, user_age FROM PROJECT_USER WHERE user_id = ?";
 		
 		Connection conn=null;
 		PreparedStatement pstmt = null;
@@ -73,8 +73,8 @@ public class MemberStoreLogic implements MemberStore{
 				user.setId(rs.getString(1));
 				user.setPw(rs.getString(2));
 				user.setName(rs.getString(3));
-				user.setAge(rs.getInt(4));
-				user.setSex(rs.getInt(5));
+				user.setSex(rs.getString(4));
+				user.setAge(rs.getInt(5));
 			}
 			
 		} catch (SQLException e) {

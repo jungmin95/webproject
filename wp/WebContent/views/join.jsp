@@ -410,10 +410,7 @@
                                         <label>성별<sup>*</sup>
                                         </label>
                                         <br>
-                                        <select name="user_sex" class="form-control">
-                                            <option>남자 (man) </option>
-                                            <option>여자 (woman) </option>
-                                        </select>
+                                        <input type="text" name="user_age" value="" placeholder="ex ) 남자, 여자 " class="form-control">
                                     </div>
                                     <div class="form-group col-md-7 col-sm-6 col-xs-12">
                                         <label>이름 <sup>*</sup>
