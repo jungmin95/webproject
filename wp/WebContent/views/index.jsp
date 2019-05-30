@@ -76,7 +76,7 @@
                                      <form action="${pageContext.request.contextPath}/user/login.do" method="POST" class="form-signin">
                                     <a id="forgot_pw" href="#">비밀번호 찾기</a>
                                     <button id="Sign_in" type="submit" class="button_drop outline">로그인</button>
-                                    <a id="Sign_up" type="submit" href="join.jsp" class="button_drop outline">회원가입</a>
+                                    <a id="Sign_up" type="submit" href="${pageContext.request.contextPath}/user/join.do" class="button_drop outline">회원가입</a>
                                     </form>
                                 </div>
                             </div><!-- End Dropdown access -->

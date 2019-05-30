@@ -7,6 +7,16 @@ public class User {
 	private int sex;
 	private int age;
 	
+	public User() {}
+	
+	public User(String id, String pw, String name, int sex, int age) {
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.sex = sex;
+		this.age = age;
+	}
+	
 	public String getId() {
 		return id;
 	}

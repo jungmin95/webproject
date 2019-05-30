@@ -1,9 +1,12 @@
 package kr.co.wp.controller;
 
+
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -25,15 +28,23 @@ public class UserController {
 			session.setAttribute("id", user_id);
 			session.setAttribute("name", user_id);
 		}
-		return "redirect:/views/login.jsp";
+		return "redirect:/views/login_main.jsp";
 	}
 	
-	@RequestMapping(value ="join.do",method= {RequestMethod.POST,RequestMethod.GET})
+	@RequestMapping(value ="join.do",method= RequestMethod.GET)
+	public String join(Model model) {
+		
+		
+		return "redirect:/views/join.jsp";
+	}
+	
+	@RequestMapping(value ="join.do",method= RequestMethod.POST)
 	public String join(User user) {
 		
 		service.register(user);
 		
-		return "redirect:/index.jsp";
+		return "redirect:/views/index.jsp";
 	}
+	
 	
 }
