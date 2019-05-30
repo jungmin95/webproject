@@ -32,8 +32,14 @@ public class UserController {
 	}
 	
 	@RequestMapping(value ="join.do",method= RequestMethod.GET)
-	public String join(Model model) {
+	public String join(Model model,String user_id, String user_pw, String user_name, Integer user_sex, Integer user_age) {
 		
+		
+		model.addAttribute("user_id",user_id);
+		model.addAttribute("user_pw", user_pw);
+		model.addAttribute("user_name", user_name);
+		model.addAttribute("user_sex", user_sex);
+		model.addAttribute("user_age", user_age);
 		
 		return "redirect:/views/join.jsp";
 	}

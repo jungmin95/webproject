@@ -389,7 +389,7 @@
                 <div class="col-md-7 col-sm-12 col-xs-12">
                     <div class="billing-details">
                         <div class="shop-form">
-                            <form method="post">
+                            <form method="post" action="${pageContext.request.contextPath}/user/join.do">
                                 <div class="default-title">
                                     <h2>회원가입</h2>
                                    <hr>
@@ -423,10 +423,10 @@
                                     <div class="form-group col-md-7 col-sm-6 col-xs-12">
                                         <label>나이 <sup>*</sup> &nbsp&nbsp
                                         </label>
-                                        <input type="int" name="user_age" value="" placeholder="ex ) 20세 -> 20" class="form-control">
+                                        <input type="number" name="user_age" value="" placeholder="ex ) 20세 -> 20" class="form-control">
                                     </div>
                                 </div>
-                                <a href="${pageContext.request.contextPath}/user/join.do" class="btn_1 outline">완료</a>
+                                <button class="btn_1 outline">완료</button>
                             </form>
                         </div>
                     </div>
