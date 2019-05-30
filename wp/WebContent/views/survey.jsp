@@ -520,7 +520,7 @@
 		</article>
 		
 		<p class="text-center add_bottom_30">
-            <a href="${pageContext.request.contextPath}/user/servey.do" class="btn_1 outline">완료</a>
+            <a href="${pageContext.request.contextPath}/survey/survey.do" class="btn_1 outline">완료</a>
 		</p>
 		
 	</div>

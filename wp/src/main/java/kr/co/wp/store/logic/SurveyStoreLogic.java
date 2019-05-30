@@ -8,23 +8,24 @@ import java.sql.SQLException;
 import org.springframework.stereotype.Repository;
 
 import kr.co.wp.domain.Servey;
-import kr.co.wp.store.ServeyStore;
+import kr.co.wp.domain.Survey;
+import kr.co.wp.store.SurveyStore;
 import kr.co.wp.store.factory.ConnectionFactory;
 import kr.co.wp.store.factory.JdbcUtils;
 
 
 
 @Repository
-public class ServeyStoreLogic implements ServeyStore {
+public class SurveyStoreLogic implements SurveyStore {
 
 	private ConnectionFactory connectionFactory;
 	
-	public ServeyStoreLogic() {
+	public SurveyStoreLogic() {
 		connectionFactory = ConnectionFactory.getInstance();
 	}
 	
 	@Override
-	public boolean set(Servey servey) {
+	public boolean set(Survey survey) {
 		
 		Connection conn = null;
 		PreparedStatement psmt = null;
@@ -34,18 +35,18 @@ public class ServeyStoreLogic implements ServeyStore {
 		try {
 			conn = connectionFactory.createConnection();
 			
-			psmt = conn.prepareStatement("INSERT INTO PROJECT_SERVEY(SERVEY_NUM, USER_ID, SURVEY_1, SURVEY_2, SURVEY_3, SURVEY_4, SURVEY_5, SURVEY_6, SURVEY_7, SURVEY_8) VALUES (?,?,?,?,?,?,?,?,?,?)");
+			psmt = conn.prepareStatement("INSERT INTO PROJECT_SURVEY(SURVEY_NUM, USER_ID, SURVEY_1, SURVEY_2, SURVEY_3, SURVEY_4, SURVEY_5, SURVEY_6, SURVEY_7, SURVEY_8) VALUES (?,?,?,?,?,?,?,?,?,?)");
 			
 			psmt.setInt(1, num);
-			psmt.setString(2, servey.getUserId());
-			psmt.setInt(3, servey.getServey(0));
-			psmt.setInt(4, servey.getServey(1));
-			psmt.setInt(5, servey.getServey(2));
-			psmt.setInt(6, servey.getServey(3));
-			psmt.setInt(7, servey.getServey(4));
-			psmt.setInt(8, servey.getServey(5));
-			psmt.setInt(9, servey.getServey(6));
-			psmt.setInt(10, servey.getServey(7));
+			psmt.setString(2, survey.getUserId());
+			psmt.setInt(3, survey.getSurvey(0));
+			psmt.setInt(4, survey.getSurvey(1));
+			psmt.setInt(5, survey.getSurvey(2));
+			psmt.setInt(6, survey.getSurvey(3));
+			psmt.setInt(7, survey.getSurvey(4));
+			psmt.setInt(8, survey.getSurvey(5));
+			psmt.setInt(9, survey.getSurvey(6));
+			psmt.setInt(10, survey.getSurvey(7));
 
 			createdCount = psmt.executeUpdate();
 
@@ -60,14 +61,14 @@ public class ServeyStoreLogic implements ServeyStore {
 	}
 
 	@Override
-	public Servey read(String UserId) {
+	public Survey read(String UserId) {
 		
 		String sql="SELECT SURVEY_1, SURVEY_2, SURVEY_3, SURVEY_4, SURVEY_5, SURVEY_6, SURVEY_7, SURVEY_8 FROM PROJECT_SERVEY WHERE USER_ID = ?";
 
 		Connection conn = null;
 		PreparedStatement psmt = null;
 		ResultSet rs = null;
-		Servey servey = null;
+		Survey survey = null;
 
 		try {
 			conn = connectionFactory.createConnection();
@@ -76,15 +77,15 @@ public class ServeyStoreLogic implements ServeyStore {
 			
 			rs = psmt.executeQuery();
 			if (rs.next()) {
-				servey = new Servey();
-				servey.setServey(rs.getInt(1),0);
-				servey.setServey(rs.getInt(2),1);
-				servey.setServey(rs.getInt(3),2);
-				servey.setServey(rs.getInt(4),3);
-				servey.setServey(rs.getInt(5),4);
-				servey.setServey(rs.getInt(6),5);
-				servey.setServey(rs.getInt(7),6);
-				servey.setServey(rs.getInt(8),7);
+				survey = new Survey();
+				survey.setSurvey(rs.getInt(1),0);
+				survey.setSurvey(rs.getInt(2),1);
+				survey.setSurvey(rs.getInt(3),2);
+				survey.setSurvey(rs.getInt(4),3);
+				survey.setSurvey(rs.getInt(5),4);
+				survey.setSurvey(rs.getInt(6),5);
+				survey.setSurvey(rs.getInt(7),6);
+				survey.setSurvey(rs.getInt(8),7);
 			}
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -92,7 +93,7 @@ public class ServeyStoreLogic implements ServeyStore {
 			JdbcUtils.Close(rs, psmt, conn);
 		}
 
-		return servey;
+		return survey;
 	}
 
 }

@@ -1,11 +1,11 @@
 package kr.co.wp.domain;
 
-public class Servey {
+public class Survey {
 
 	private int sNum;
 	private String userId;
 	
-	private Integer[] servey;
+	private Integer[] survey;
 	/*private int s2;
 	private int s3;
 	private int s4;
@@ -19,12 +19,12 @@ public class Servey {
 		return userId;
 	}
 	
-	public Integer getServey(int index) {
-		return servey[index];
+	public Integer getSurvey(int index) {
+		return survey[index];
 	}
 	
-	public void setServey(Integer servey, int index) {
-		this.servey[index]=servey;
+	public void setSurvey(Integer value, int index) {
+		this.survey[index]=value;
 	}
 	
 }
