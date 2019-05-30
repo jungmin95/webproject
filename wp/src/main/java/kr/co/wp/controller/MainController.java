@@ -22,7 +22,7 @@ public class MainController {
 	//°¶·¯¸® create
 	@RequestMapping(value="/gallery/create")
 	public String gallery_create() {
-		return "Gallery/create";
+		return "gallery/create";
 	}
 	
 }
