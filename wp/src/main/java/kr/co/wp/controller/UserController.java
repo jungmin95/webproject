@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.co.wp.domain.User;
 import kr.co.wp.service.MemberService;
-import kr.co.wp.service.logic.MemberServiceLogic;
 
 @Controller
 @RequestMapping(value="user")
@@ -19,17 +18,17 @@ public class UserController {
 	@Autowired
 	private MemberService service;
 	
-	@RequestMapping("login.do")
-	public String login(HttpSession session, String inputEmail, String inputPassword) {
+	@RequestMapping(value = "login.do", method=RequestMethod.POST)
+	public String login(HttpSession session, String user_id, String user_pw) {
 		
-		if("1234".equals(inputPassword)) {
-			session.setAttribute("id", inputEmail);
-			session.setAttribute("name", inputEmail);
+		if("1234".equals(user_pw)) {
+			session.setAttribute("id", user_id);
+			session.setAttribute("name", user_id);
 		}
-		return "redirect:/board/list.do";
+		return "redirect:/views/login.jsp";
 	}
 	
-	@RequestMapping(value ="join.do",method=RequestMethod.POST)
+	@RequestMapping(value ="join.do",method= {RequestMethod.POST,RequestMethod.GET})
 	public String join(User user) {
 		
 		service.register(user);
