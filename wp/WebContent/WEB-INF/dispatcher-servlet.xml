@@ -16,6 +16,11 @@
 		
 	</bean>
 	
+		<context:component-scan base-package="kr.co.wp" >
+	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+
+</context:component-scan>
+	
 
 
 </beans>
