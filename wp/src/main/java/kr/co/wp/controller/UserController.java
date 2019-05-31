@@ -49,7 +49,7 @@ public class UserController {
      
      service.register(user); 
      
-      return "redirect:/views/survey.jsp";
+      return "main/main-page";
    
    }
    @RequestMapping(value ="join.do", method= RequestMethod.GET)
