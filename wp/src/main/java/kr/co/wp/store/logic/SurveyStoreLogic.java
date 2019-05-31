@@ -7,7 +7,6 @@ import java.sql.SQLException;
 
 import org.springframework.stereotype.Repository;
 
-import kr.co.wp.domain.Servey;
 import kr.co.wp.domain.Survey;
 import kr.co.wp.store.SurveyStore;
 import kr.co.wp.store.factory.ConnectionFactory;

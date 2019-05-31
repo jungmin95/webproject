@@ -57,8 +57,7 @@
 					<ul id="top_links">
 						<li>
 
-							<form action="${pageContext.request.contextPath}/user/login.do"
-								method="POST" class="form-signin">
+							<form action="${pageContext.request.contextPath}/user/login.do" method="POST" class="form-signin">
 								<div class="dropdown dropdown-access">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"
 										id="access_link">Login</a>
@@ -74,10 +73,8 @@
 												id="inputPassword" placeholder="Password">
 										</div>
 										<a id="forgot_pw" href="#">비밀번호 찾기</a>
-										<!-- <a id="Sign_in" type="submit" href="index.jsp" class="button_drop outline">로그인</a> -->
 										<button class="button_drop outline" type="submit">로그인</button>
-										<a id="Sign_up" type="submit" href="join.jsp"
-											class="button_drop outline">회원가입</a>
+										<a id="Sign_up" type="submit" href="${pageContext.request.contextPath}/user/join.do" class="button_drop outline">회원가입</a>
 									</div>
 
 								</div>
