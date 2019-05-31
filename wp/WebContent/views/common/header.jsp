@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <style>
 #primary-menu>ul>li:first-child {
@@ -57,6 +57,9 @@
 					<ul id="top_links">
 						<li>
 
+				<c:choose>
+				<c:when test="${loginedUser eq null}">
+				
 							<form action="${pageContext.request.contextPath}/user/login.do" method="POST" class="form-signin">
 								<div class="dropdown dropdown-access">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -65,11 +68,11 @@
 
 									<div class="dropdown-menu">
 										<div class="form-group">
-											<input type="text" class="form-control"
+											<input type="text" class="form-control" name="user_id"
 												id="inputUsernameEmail" placeholder="ID">
 										</div>
 										<div class="form-group">
-											<input type="password" class="form-control"
+											<input type="password" class="form-control" name="user_pw"
 												id="inputPassword" placeholder="Password">
 										</div>
 										<a id="forgot_pw" href="#">비밀번호 찾기</a>
@@ -81,7 +84,11 @@
 								<!-- End Dropdown access -->
 
 							</form>
-						</li>
+</c:when>
+	<c:otherwise>
+		<b>${loginedUser.name}</b> 님!! 환영합니다. [<a href="logout">로그아웃</a>]
+ 	</c:otherwise>
+</c:choose>
 						<li><a href="wishlist.html" id="wishlist_link">즐겨찾기</a></li>
 					</ul>
 				</div>
