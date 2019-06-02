@@ -16,15 +16,15 @@
 		<c:forEach var="tour" items="${list }">
 		<tr>
 			<td>
-				${tour.tourlistId }
+				${tour.tournum }
 			</td>
 			<td>
-			<a href="${path }/${tour.tourlistId}">
-				<img src="${path}/images/${tour.tourlistUrl}" width="120px" height="100px">
+			<a href="${path }/${tour.tournum}">
+				<img src="${path}/images/${tour.tourimg}" width="120px" height="100px">
 			</a>
 			</td>
 			<td>
-			<a href="${path }/${tour.tourlistId}">${tour.tourlistName }</a>
+			<a href="${path }/${tour.tournum}">${tour.tourname }</a>
 			</td>
 		</tr>
 		</c:forEach>
