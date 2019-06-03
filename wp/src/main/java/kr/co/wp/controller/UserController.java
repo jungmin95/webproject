@@ -2,6 +2,8 @@ package kr.co.wp.controller;
 
 
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,16 +26,24 @@ public class UserController {
    @Autowired
    private MemberService service;
    
-   @RequestMapping(value = "login.do", method=RequestMethod.POST)
-   public String login(HttpSession session, String user_id, String user_pw) {
+   
+   @RequestMapping(value = "login.do", method= {RequestMethod.POST,RequestMethod.GET})
+   public String login(HttpSession session,User user,@RequestParam("user_id") String user_id,@RequestParam("user_pw")String user_pw) {
       
-      if("1234".equals(user_pw)) {
-         session.setAttribute("id", user_id);
-         session.setAttribute("name", user_id);
-      }
-      return "redirect:/views/login_main.jsp";
+	   
+	   user.setId(user_id);
+	   user.setPw(user_pw);
+	   
+//	   String loginId = user.setId(user_id);
+//	   user.find(loginId);
+	   
+	   service.login(user);   
+	   session.setAttribute("user-_id", user_id);
+	   
+      return "main/main-page";
    }
    
+
    
    @RequestMapping(value ="join.do",method= {RequestMethod.POST,RequestMethod.GET})
    public String join(HttpSession session, User user,@RequestParam("user_id") String user_id,@RequestParam("user_pw") String user_pw
