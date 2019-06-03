@@ -51,7 +51,7 @@ public class MemberStoreLogic implements MemberStore{
 	}
 
 	@Override
-	public User read(String id) {
+	public User read(String user_id) {
 
 		String sql = "SELECT user_id, user_pw, user_name, user_sex, user_age FROM PROJECT_USER WHERE user_id = ?";
 		
@@ -64,7 +64,7 @@ public class MemberStoreLogic implements MemberStore{
 		try {
 			conn = connectionFactory.createConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
+			pstmt.setString(1, user_id);
 			
 			rs = pstmt.executeQuery();
 			
@@ -84,5 +84,36 @@ public class MemberStoreLogic implements MemberStore{
 		}
 		return user;
 	}
+	
+	@Override
+	public User login(String user_id) {
 
+		String sql = "SELECT user_id, user_pw FROM PROJECT_USER WHERE user_id = ?";
+		
+		Connection conn=null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		User user = null;
+		
+		try {
+			conn = connectionFactory.createConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user_id);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				user = new User();
+				user.setId(rs.getString(1));
+				user.setPw(rs.getString(2));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtils.Close(conn, rs, pstmt); 
+		}
+		return user;
+	}
 }

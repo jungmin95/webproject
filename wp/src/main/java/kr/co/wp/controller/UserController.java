@@ -28,21 +28,29 @@ public class UserController {
    
    
    @RequestMapping(value = "login.do", method= {RequestMethod.POST,RequestMethod.GET})
-   public String login(HttpSession session,User user,@RequestParam("user_id") String user_id,@RequestParam("user_pw")String user_pw) {
+   public String login(HttpSession session, User user,@RequestParam("user_id") String user_id,@RequestParam("user_pw")String user_pw) {
       
 	   
 	   user.setId(user_id);
 	   user.setPw(user_pw);
-	   
-//	   String loginId = user.setId(user_id);
-//	   user.find(loginId);
-	   
-	   service.login(user);   
-	   session.setAttribute("user-_id", user_id);
+	   User logindeUser = service.login(user);
+	   if(logindeUser != null) {
+	   session.setAttribute("user_id", user_id);
+	   session.setAttribute("user_pw", user_pw);
+	   }else {
+		   session.invalidate();
+	   }
 	   
       return "main/main-page";
    }
    
+   @RequestMapping(value = "logout.do", method= {RequestMethod.POST,RequestMethod.GET})
+   public String logout(HttpSession session,User user) {
+      
+	   session.invalidate();
+	 
+      return "main/main-page";
+   }
 
    
    @RequestMapping(value ="join.do",method= {RequestMethod.POST,RequestMethod.GET})

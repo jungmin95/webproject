@@ -58,14 +58,11 @@
 						<li>
 
 				<c:choose>
-				<c:when test="${user_id eq null}">
-				
+					<c:when test="${user_id eq null}">
 							<form action="${pageContext.request.contextPath}/user/login.do" method="POST" class="form-signin">
 								<div class="dropdown dropdown-access">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"
 										id="access_link">Login</a>
-
-
 									<div class="dropdown-menu">
 										<div class="form-group">
 											<input type="text" class="form-control" name="user_id"
@@ -82,12 +79,11 @@
 
 								</div>
 								<!-- End Dropdown access -->
-
 							</form>
-				</c:when>
-					<c:otherwise>
-						<b>${user_id.user_name}</b> 님!! 환영합니다. [<a href="logout">로그아웃</a>]
- 					</c:otherwise>
+					</c:when>
+						<c:otherwise>
+							<b>${user_id}</b> 님 환영합니다. [<a href="${pageContext.request.contextPath}/user/logout.do">로그아웃</a>]
+ 						</c:otherwise>
 				</c:choose>
 						<li><a href="wishlist.html" id="wishlist_link">즐겨찾기</a></li>
 					</ul>
