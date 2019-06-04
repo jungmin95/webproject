@@ -137,14 +137,14 @@
 	    
  		<article class="feature" style="text-align:center;">
          <div class="content" >
-            <h3>새로운 것에 도전하는 것을 즐긴다</h3>
+            <h3>SNS를 많이 이용한다</h3>
          </div>
          <div class="col-md-5">
-            <br><a href="survey4.jsp"><img src="/resources/img/jump.jpg" class="img-responsive" align="middle" /></a> Yes
+            <br><a href=""><img src="/resources/img/sns.jpg" class="img-responsive" align="middle" /></a> Yes
     
          </div>
          <div class="col-md-5">
-            <br><a href="survey5.jsp"><img src="/resources/img/sad.jpg" class="img-responsive" align="middle" /></a> No
+            <br><a href=""><img src="/resources/img/phone.jpg" class="img-responsive" align="middle" /></a> No
             
          </div>
          <div class="content">

@@ -137,14 +137,14 @@
 	    
  		<article class="feature" style="text-align:center;">
          <div class="content" >
-            <h3>새로운 것에 도전하는 것을 즐긴다</h3>
+            <h3>나의 여행 테마는 식도락 여행이다</h3>
          </div>
          <div class="col-md-5">
-            <br><a href="survey4.jsp"><img src="/resources/img/jump.jpg" class="img-responsive" align="middle" /></a> Yes
+            <br><a href=""><img src="/resources/img/rice.jpg" class="img-responsive" align="middle" /></a> Yes
     
          </div>
          <div class="col-md-5">
-            <br><a href="survey5.jsp"><img src="/resources/img/sad.jpg" class="img-responsive" align="middle" /></a> No
+            <br><a href="survey10.jsp"><img src="/resources/img/yoga.jpg" class="img-responsive" align="middle" /></a> No
             
          </div>
          <div class="content">

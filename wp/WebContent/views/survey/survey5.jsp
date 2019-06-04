@@ -137,14 +137,14 @@
 	    
  		<article class="feature" style="text-align:center;">
          <div class="content" >
-            <h3>새로운 것에 도전하는 것을 즐긴다</h3>
+            <h3>긍정적이란 말을 자주 듣는다</h3>
          </div>
          <div class="col-md-5">
-            <br><a href="survey4.jsp"><img src="/resources/img/jump.jpg" class="img-responsive" align="middle" /></a> Yes
+            <br><a href="survey8.jsp"><img src="/resources/img/smile.jpg" class="img-responsive" align="middle" /></a> Yes
     
          </div>
          <div class="col-md-5">
-            <br><a href="survey5.jsp"><img src="/resources/img/sad.jpg" class="img-responsive" align="middle" /></a> No
+            <br><a href="survey10.jsp"><img src="/resources/img/sad3.jpg" class="img-responsive" align="middle" /></a> No
             
          </div>
          <div class="content">
