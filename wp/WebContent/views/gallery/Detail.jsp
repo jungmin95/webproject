@@ -62,7 +62,7 @@ body{
 			<tr align="center"> 
  						<td colspan="2"> 
 							<form name="form1" method="post" action="${path}/">
-								<input type="hidden" name="tourId" value="${tour.tourId}">
+								<input type="hidden" name="tournum" value="${tour.tournum}">
  								<input type="submit" value="마이페이지"> 
  							</form> 
 							<a href ="${path}list.do">여행지 목록</a>
