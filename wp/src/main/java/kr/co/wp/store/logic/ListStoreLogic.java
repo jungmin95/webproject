@@ -8,11 +8,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import kr.co.wp.domain.Tourlist;
 import kr.co.wp.store.ListStore;
 import kr.co.wp.store.factory.ConnectionFactory;
 import kr.co.wp.store.factory.JdbcUtils;
 
+@Repository
 public class ListStoreLogic implements ListStore{
 
 	private ConnectionFactory connectionFactory;

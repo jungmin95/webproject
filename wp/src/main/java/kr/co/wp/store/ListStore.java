@@ -6,7 +6,7 @@ import kr.co.wp.domain.Tourlist;
 
 
 public interface ListStore {
-	Tourlist read(int id);
-	List<Tourlist> readByName(String name);
+	Tourlist read(int list_num);
+	List<Tourlist> readByName(String list_name);
 	List<Tourlist> readAll();
 }
