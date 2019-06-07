@@ -159,7 +159,7 @@ height: auto;
                         </div>
                         <div class="tour_title">
                             <h3><strong>${Tourlist.tourname}</strong></h3>
-                           ${Tourlist.user_id}
+                            ${Tourlist.userid}
                             <div class="rating">
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(95)</small>
                             </div>
