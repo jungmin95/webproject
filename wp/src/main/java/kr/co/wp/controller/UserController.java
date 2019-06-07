@@ -25,9 +25,8 @@ public class UserController {
    
    
    @RequestMapping(value = "login.do", method= {RequestMethod.POST,RequestMethod.GET})
-   public String login(HttpSession session, User user,@RequestParam("user_id") String user_id,@RequestParam("user_pw")String user_pw) {
+   public String login(HttpSession session, User user, @RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw) {
       
-	   
 	   user.setId(user_id);
 	   user.setPw(user_pw);
 	   User logindeUser = service.login(user);
@@ -38,7 +37,16 @@ public class UserController {
 		   session.invalidate();
 	   }
 	   
-      return "redirect:/views/survey/survey.jsp";
+	   user=service.find(user.getId());
+	   
+//	   System.out.println(user.getType());
+//	   System.out.println(user.getId());
+	   
+	   if(user.getType()>0) {
+		   return "main/main-page";
+	   }
+	  	   
+	   return "redirect:/views/survey/survey.jsp";
    }
    
    @RequestMapping(value = "logout.do", method= {RequestMethod.POST,RequestMethod.GET})
