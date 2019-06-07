@@ -139,8 +139,9 @@ height: auto;
 		<!-- End Slider -->
 
 		<div class="container margin_60">
-				<form action="searchByName">
-				<input name="list_name" type="text" placeholder="입력" value=""> <input class="btn btn-xs btn-default" type="submit" value="검색">
+				<form action="findByName.do">
+				<input name="list_name" type="text" placeholder="입력" value=""> 
+				<input class="btn btn-xs btn-default" type="submit" value="검색">
 				</form>
             <div class="main_title">
                 <h2><span>여행지</span></h2>
@@ -152,13 +153,13 @@ height: auto;
                     <div class="tour_container">
                        
                         <div class="img_container">
-                            <a href="ditail.html">
+                            <a href="detail?list_Id=${Tourlist.list_num}">
                                 <img src="/resources/img/${Tourlist.tourimg}" class="img-responsive" alt="Image">
                             </a>
                         </div>
                         <div class="tour_title">
-                            <h3><strong>${Tourlist.tourname}</strong>${Tourlist.tourname}</h3>
-                            <a class="btn btn-xs btn-default" href="detail?list_Id=${Tourlist.list_num}"></a>
+                            <h3><strong>${Tourlist.tourname}</strong></h3>
+                           
                             <div class="rating">
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(95)</small>
                             </div>

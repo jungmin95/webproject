@@ -35,7 +35,7 @@ public class ListController {
 		
 		List<Tourlist> list = service.findByName(list_name);
 		
-		ModelAndView modelAndView = new ModelAndView("gallery/list.jsp");
+		ModelAndView modelAndView = new ModelAndView("gallery/list");
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
@@ -45,7 +45,7 @@ public class ListController {
 	public ModelAndView DetailList(@RequestParam("list_num") int list_num) {
 		
 		
-		ModelAndView modelAndView = new ModelAndView("Detail.jsp");
+		ModelAndView modelAndView = new ModelAndView("gallery/Detail");
 		modelAndView.addObject("list",service.find(list_num));
 		return modelAndView;
 	}
