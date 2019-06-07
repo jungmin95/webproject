@@ -140,7 +140,7 @@ height: auto;
 
 		<div class="container margin_60">
 				<form action="findByName.do">
-				<input name="list_name" type="text" placeholder="입력" value=""> 
+				<input name="list_name" type="text" placeholder="여행지 검색" value=""> 
 				<input class="btn btn-xs btn-default" type="submit" value="검색">
 				</form>
             <div class="main_title">
@@ -172,7 +172,7 @@ height: auto;
                     </div>
                     <!-- End box tour -->
                 </div> 
-                </c:forEach>
+              </c:forEach>
         </div>
             </div>
             <!-- End row -->
