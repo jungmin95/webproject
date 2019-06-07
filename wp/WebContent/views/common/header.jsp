@@ -124,7 +124,7 @@
 
 								<li><a href="javascript:void(0);">서울</a>
 									<ul>
-										<li><a href="showall.html">서울 전체</a></li>
+										<li><a href="${pageContext.request.contextPath}/list/findAll.do">서울 전체</a></li>
 										<li><a href="showall.html">강남/서초</a></li>
 										<li><a href="showall.html">강동/송파</a></li>
 										<li><a href="showall.html">강서/양천</a></li>
