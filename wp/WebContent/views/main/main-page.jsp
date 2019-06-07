@@ -132,6 +132,7 @@
 		<!-- End Slider -->
 
 		<div class="container margin_60">
+		
 
             <div class="main_title">
                 <h2>Best <span>Top 10</span></h2>
@@ -150,7 +151,7 @@
                         </div>
                         <div class="tour_title">
                             <h3><strong>${Tourlist.tourname}</strong></h3>
-                           
+                            ${Tourlist.userid}
                             <div class="rating">
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(95)</small>
                             </div>
