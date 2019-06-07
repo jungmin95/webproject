@@ -263,7 +263,7 @@
 							<ul>
 								<li><a href="${pageContext.request.contextPath}/list/findAll.do">레저</a></li>
 								<li><a href="${pageContext.request.contextPath}/list/findAll.do">먹거리</a></li>
-								<li><a href="${pageContext.request.contextPath}/list/findAll.do">유적지</a></li>
+								<li><a href="${pageContext.request.contextPath}/list/findAll.do">힐링</a></li>
 								<li><a href="${pageContext.request.contextPath}/list/findAll.do">축제</a></li>
 							</ul></li>
 						<li class="submenu"><a href="javascript:void(0);"

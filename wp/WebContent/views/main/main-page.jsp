@@ -170,7 +170,7 @@
         </div>
 			<!-- End row -->
 			<p class="text-center add_bottom_30">
-				<a href="showall.html" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+				<a href="${pageContext.request.contextPath}/list/findAll.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
 			</p>
 
 		</div>
@@ -212,11 +212,11 @@
                                             <a href="showall.html"><img src="/resources/img/history1.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
-                                        <h4><span>유적지 </span>탐방</h4>
+                                        <h4><span>힐링 </span> 여행</h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/festival.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/대나무.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>축제 </span> 여행</h4>
@@ -230,28 +230,28 @@
 
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/bus.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/1020.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>10 ~ 20</span> 대</h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/transfer.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/2030.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>20 ~ 30</span> 대</h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/guide.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/3040.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>30 ~ 40 </span> 대</h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/hotel.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/4050.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>40 ~ 50 </span> 대</h4>
