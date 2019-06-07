@@ -38,7 +38,7 @@ public class UserController {
 		   session.invalidate();
 	   }
 	   
-      return "main/main-page";
+      return "redirect:/views/survey/survey.jsp";
    }
    
    @RequestMapping(value = "logout.do", method= {RequestMethod.POST,RequestMethod.GET})
@@ -72,6 +72,17 @@ public class UserController {
       
       return "redirect:/views/join.jsp";
    
+   }
+   
+   @RequestMapping(value ="survey.do", method=RequestMethod.GET)
+   public String survey(HttpSession session, User user, @RequestParam("type") Integer user_type) {
+	   
+	   user.setId((String)session.getAttribute("user_id"));
+	   user.setType(user_type);
+	   
+	   service.survey(user);
+	   
+	   return "main/main-page";
    }
    
 }

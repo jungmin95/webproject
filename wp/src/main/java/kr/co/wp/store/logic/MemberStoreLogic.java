@@ -53,7 +53,7 @@ public class MemberStoreLogic implements MemberStore{
 	@Override
 	public User read(String user_id) {
 
-		String sql = "SELECT user_id, user_pw, user_name, user_sex, user_age FROM PROJECT_USER WHERE user_id = ?";
+		String sql = "SELECT user_id, user_pw, user_name, user_sex, user_age, user_type FROM PROJECT_USER WHERE user_id = ?";
 		
 		Connection conn=null;
 		PreparedStatement pstmt = null;
@@ -75,6 +75,7 @@ public class MemberStoreLogic implements MemberStore{
 				user.setName(rs.getString(3));
 				user.setSex(rs.getString(4));
 				user.setAge(rs.getInt(5));
+				user.setType(rs.getInt(6));
 			}
 			
 		} catch (SQLException e) {
@@ -116,4 +117,32 @@ public class MemberStoreLogic implements MemberStore{
 		}
 		return user;
 	}
+
+
+	@Override
+	public User set(User user) {
+		
+		Connection connection = null;
+		PreparedStatement psmt = null;
+		try {
+			connection = connectionFactory.createConnection();
+			
+			psmt = connection.prepareStatement("UPDATE PROJECT_USER SET user_type = ? WHERE user_id = ?");
+			
+			psmt.setInt(1, user.getType());
+			psmt.setString(2, user.getId());
+			
+			psmt.executeUpdate();
+	
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		} finally {
+			JdbcUtils.Close(psmt, connection);
+		}
+		//System.out.println(user.getType());
+		//System.out.println(user.getId());
+
+		return user;
+	}
+	
 }

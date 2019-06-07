@@ -31,6 +31,18 @@
 <script src="js/respond.min.js"></script>
 <![endif]-->
 
+<style>
+button {
+	width : 382.5px;
+	height : 247.73px;
+}
+img {
+	width : 382.5px;
+	height : 247.73px;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -134,23 +146,27 @@
 		<div class="main_title">
 	    	 <h2>여행 취향 <span>TEST</span></h2>
 	    </div>
-	    
- 		<article class="feature" style="text-align:center;">
-         <div class="content" >
-            <h3>SNS를 많이 이용한다</h3>
-         </div>
-         <div class="col-md-5">
-            <br><a href=""><img src="/resources/img/sns.jpg" class="img-responsive" align="middle" /></a> Yes
-    
-         </div>
-         <div class="col-md-5">
-            <br><a href=""><img src="/resources/img/phone.jpg" class="img-responsive" align="middle" /></a> No
-            
-         </div>
-         <div class="content">
-            <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-         </div>
-         </article>
+	    <form action="${pageContext.request.contextPath }/user/survey.do" method="get">
+	 		<article class="feature" style="text-align:center;">
+	         <div class="content" >
+	            <h3>SNS를 많이 이용한다</h3>
+	         </div>
+	         <div class="col-md-5">
+	<%--             <br><a id="D" href="${pageContext.request.contextPath }/survey/survey.do"><img src="/resources/img/sns.jpg" class="img-responsive" align="middle" /></a> Yes --%>
+	    		<br><button type="submit" name="type" value="4"><img src="/resources/img/sns.jpg" alt=""><span class="text-white">Yes</span> 
+	     		</button>
+	    	 </div>
+	    	 
+	         <div class="col-md-5">
+	<%--             <br><a id="C" href="${pageContext.request.contextPath }/survey/survey.do"><img src="/resources/img/phone.jpg" class="img-responsive" align="middle" /></a> No --%>
+	             <br><button type="submit" name="type" value="3"><img src="/resources/img/phone.jpg" alt=""><span class="text-white">No</span> 
+	    		</button> 
+	         </div>
+	         <div class="content">
+	            <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	         </div>
+	         </article>
+         </form>
 
 	</div>
 
@@ -244,7 +260,7 @@ Web Project
 <script type="text/javascript" src="/resources/js/revolution_func.js""></script>
 <!-- <script src="js/tabs.js"></script> -->
 <script type="text/javascript" src="/resources/js/tabs.js""></script>
-<script>new CBPFWTabs( document.getElementById( 'tabs' ) );</script>
+
 
 </body>
 

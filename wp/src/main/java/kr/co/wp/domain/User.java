@@ -6,6 +6,7 @@ public class User {
 	private String name;
 	private String sex;
 	private Integer age;
+	private Integer type;
 	
 	public User() {}
 	
@@ -46,5 +47,11 @@ public class User {
 	}
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+	public Integer getType() {
+		return type;
+	}
+	public void setType(Integer type) {
+		this.type = type;
 	}
 }

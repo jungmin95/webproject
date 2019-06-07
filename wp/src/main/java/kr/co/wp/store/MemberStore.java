@@ -7,5 +7,6 @@ public interface MemberStore{
 	boolean create(User user);
 	User read(String user_id);
 	User login(String user_id);
+	User set(User user);
 
 }

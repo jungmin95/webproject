@@ -17,7 +17,16 @@ public class MemberServiceLogic implements MemberService{
 
 	@Override
 	public User login(User user) {
-
+		//
+//		User readedUser = null;
+//		if (validate(user)) {
+//			readedUser = store.login(user.getId());
+////		}
+//		readedUser = store.login(user.getId());
+//		if(user == readedUser) {
+//			return readedUser;
+//		}
+//		
 		return store.login(user.getId());
 	}
 	
@@ -49,5 +58,11 @@ public class MemberServiceLogic implements MemberService{
 			throw new RuntimeException("PW가 틀립니다.");
 		}
 		return true;
+	}
+
+	@Override
+	public User survey(User user) {
+		
+		return store.set(user);
 	}
 }

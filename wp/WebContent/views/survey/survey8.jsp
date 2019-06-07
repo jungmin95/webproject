@@ -134,14 +134,15 @@
 		<div class="main_title">
 	    	 <h2>여행 취향 <span>TEST</span></h2>
 	    </div>
-	    
+	    <form action="${pageContext.request.contextPath }/user/survey.do" method="get">
  		<article class="feature" style="text-align:center;">
          <div class="content" >
             <h3>혼자보다 여럿이 가는 여행이 좋다</h3>
          </div>
          <div class="col-md-5">
-            <br><a href=""><img src="/resources/img/friend.jpg" class="img-responsive" align="middle" /></a> Yes
-    
+<!--             <br><a href=""><img src="/resources/img/friend.jpg" class="img-responsive" align="middle" /></a> Yes -->
+    			<br><button type="submit" name="type" value="2"><img src="/resources/img/friend.jpg" alt=""><span class="text-white">Yes</span> 
+	     		</button>
          </div>
          <div class="col-md-5">
             <br><a href="survey9.jsp"><img src="/resources/img/alone.jpg" class="img-responsive" align="middle" /></a> No
@@ -151,7 +152,7 @@
             <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
          </div>
          </article>
-
+         </form>
 	</div>
 
 <div class="container margin_60">
