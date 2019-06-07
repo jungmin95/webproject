@@ -117,7 +117,7 @@
 					<a href="#" class="open_close" id="close_in"><i
 						class="icon_set_1_icon-77"></i></a>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/views/main/main-page.jsp">홈</a></li>
+						<li><a href="${pageContext.request.contextPath}/index.do">홈</a></li>
 						<li class="submenu"><a href="javascript:void(0);"
 							class="show-submenu">지역 <i class="icon-down-open-mini"></i></a>
 							<ul>
