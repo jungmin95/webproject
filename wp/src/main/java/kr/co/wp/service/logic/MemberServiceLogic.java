@@ -30,7 +30,6 @@ public class MemberServiceLogic implements MemberService{
 		return store.login(user.getId());
 	}
 	
-
 	@Override
 	public boolean register(User user) {
 		//
@@ -65,4 +64,5 @@ public class MemberServiceLogic implements MemberService{
 		
 		return store.set(user);
 	}
+	
 }
