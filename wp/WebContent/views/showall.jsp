@@ -259,7 +259,7 @@
                             </ul>
                         </li>
                         <li class="submenu">
-                            <a href="javascript:void(0);" class="show-submenu">태마 <i class="icon-down-open-mini"></i></a>
+                            <a href="javascript:void(0);" class="show-submenu">테마 <i class="icon-down-open-mini"></i></a>
                             <ul>
                                 <li><a href="showall.html">레저</a></li>
                                 <li><a href="showall.html">먹거리</a></li>

@@ -198,28 +198,28 @@
                                             <a href="showall.html"><img src="/resources/img/leisure.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
-                                        <h4><span>레저</span> 여행</h4>
+                                        <h4><span>액티비티형</span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
                                             <a href="showall.html"><img src="/resources/img/foodlist.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
-                                        <h4><span>먹거리</span> 투어</h4>
+                                        <h4><span>욜로형</span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
                                             <a href="showall.html"><img src="/resources/img/history1.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
-                                        <h4><span>힐링 </span> 여행</h4>
+                                        <h4><span>역사탐밤형 </span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
                                             <a href="showall.html"><img src="/resources/img/대나무.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
-                                        <h4><span>축제 </span> 여행</h4>
+                                        <h4><span>힐링형</span></h4>
                                     </div>
                                 </div>
 							</div>

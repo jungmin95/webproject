@@ -321,10 +321,10 @@ table thead th {
 											<td style="border-color: #ddd;"><select
 												style="width: 60%; margin-left: 10px;">
 													<option name="field" selected>------테마 선택------</option>
-													<option>-레저</option>
-													<option>-먹거리</option>
-													<option>-유적지</option>
-													<option>-축제</option>
+													<option>-액티비티형</option>
+													<option>-욜로형</option>
+													<option>-역사탐방형</option>
+													<option>-힐링형</option>
 													<option>-기타</option>
 											</select></td>
 											<td
