@@ -184,7 +184,7 @@
 				<div id="tabs" class="tabs">
 					<nav>
 						<ul>
-							<li><a href="#section-1" class="icon-tours"><span>태마</span></a></li>
+							<li><a href="#section-1" class="icon-tours"><span>테마</span></a></li>
 							<li><a href="#section-2" class="icon-hotels"><span>연령</span></a></li>
 
 						</ul>

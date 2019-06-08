@@ -27,7 +27,7 @@ public class ListStoreLogic implements ListStore{
 	
 	@Override
 	public Tourlist read(int list_num) {
-		String sql = "SELECT list_num,user_id,list_img,list_name,list_story,list_type FROM project_list WHERE list_name = ?" ;
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_name = ?" ;
 
 		Connection conn = null;
 		PreparedStatement psmt = null;
@@ -44,9 +44,12 @@ public class ListStoreLogic implements ListStore{
 				list.setList_num(rs.getInt(1));
 				list.setUserid(rs.getString(2));
 				list.setTourimg(rs.getString(3));
-				list.setTourname(rs.getString(4));
-				list.setTourstory(rs.getString(5));
-				list.setTourtype(rs.getString(6));
+				list.setTour_areaname(rs.getString(4));
+				list.setTourname(rs.getString(5));
+				list.setTourLocation(rs.getString(6));
+				list.setTourstory(rs.getString(7));
+				list.setTourtype(rs.getString(8));
+				list.setTourRank(rs.getInt(9));
 			}
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -59,7 +62,7 @@ public class ListStoreLogic implements ListStore{
 
 	@Override
 	public List<Tourlist> readByName(String list_name) {
-		String sql = "SELECT list_num,user_id,list_img,list_name,list_story,list_type FROM project_list WHERE list_name LIKE ?" ;
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_name LIKE ?" ;
 
 		Connection conn = null;
 		Statement statement = null;
@@ -79,9 +82,12 @@ public class ListStoreLogic implements ListStore{
 				list.setList_num(rs.getInt(1));
 				list.setUserid(rs.getString(2));
 				list.setTourimg(rs.getString(3));
-				list.setTourname(rs.getString(4));
-				list.setTourstory(rs.getString(5));
-				list.setTourtype(rs.getString(6));
+				list.setTour_areaname(rs.getString(4));
+				list.setTourname(rs.getString(5));
+				list.setTourLocation(rs.getString(6));
+				list.setTourstory(rs.getString(7));
+				list.setTourtype(rs.getString(8));
+				list.setTourRank(rs.getInt(9));
 				lists.add(list);
 			}
 		} catch (SQLException e) {
@@ -95,7 +101,7 @@ public class ListStoreLogic implements ListStore{
 
 	@Override
 	public List<Tourlist> readAll() {
-		String sql = "SELECT list_num,user_id,list_img,list_name,list_story,list_type FROM project_list" ;
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list" ;
 
 		Connection conn = null;
 		Statement statement = null;
@@ -112,9 +118,12 @@ public class ListStoreLogic implements ListStore{
 				list.setList_num(rs.getInt(1));
 				list.setUserid(rs.getString(2));
 				list.setTourimg(rs.getString(3));
-				list.setTourname(rs.getString(4));
-				list.setTourstory(rs.getString(5));
-				list.setTourtype(rs.getString(6));
+				list.setTour_areaname(rs.getString(4));
+				list.setTourname(rs.getString(5));
+				list.setTourLocation(rs.getString(6));
+				list.setTourstory(rs.getString(7));
+				list.setTourtype(rs.getString(8));
+				list.setTourRank(rs.getInt(9));
 				lists.add(list);
 			}
 		} catch (SQLException e) {
