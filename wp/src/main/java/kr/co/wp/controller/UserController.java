@@ -1,9 +1,5 @@
 package kr.co.wp.controller;
 
-
-
-
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +14,6 @@ import kr.co.wp.service.MemberService;
 @Controller
 @RequestMapping(value="user")
 public class UserController {
-
    
    @Autowired
    private MemberService service;
@@ -44,9 +39,8 @@ public class UserController {
 	   
 	   if(user.getType()>0) {
 		   return "main/main-page";
-	   }
-	  	   
-	   return "redirect:/views/survey/survey.jsp";
+	   }  
+	   return "redirect:/views/survey/main.jsp";
    }
    
    @RequestMapping(value = "logout.do", method= {RequestMethod.POST,RequestMethod.GET})
@@ -56,7 +50,6 @@ public class UserController {
 	 
       return "main/main-page";
    }
-
    
    @RequestMapping(value ="join.do",method= {RequestMethod.POST,RequestMethod.GET})
    public String join(HttpSession session, User user,@RequestParam("user_id") String user_id,@RequestParam("user_pw") String user_pw
@@ -75,6 +68,7 @@ public class UserController {
       return "main/main-page";
    
    }
+   
    @RequestMapping(value ="join.do", method= RequestMethod.GET)
    public String join()  {
       
