@@ -145,14 +145,16 @@
 	     		</button>
          </div>
          <div class="col-md-5">
-            <br><a href="survey10.jsp"><img src="/resources/img/yoga.jpg" class="img-responsive" align="middle" /></a> No
-            	
+<!--             <br><a href="survey10.jsp"><img src="/resources/img/yoga.jpg" class="img-responsive" align="middle" /></a> No -->
+            	<br><input type="button" onClick="location.href='survey10.jsp'"><img src="/resources/img/yoga.jpg" alt=""><span class="text-white">No</span> 
+	     		
          </div>
          <div class="content">
             <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
          </div>
          </article>
          </form>
+         
 
 	</div>
 
