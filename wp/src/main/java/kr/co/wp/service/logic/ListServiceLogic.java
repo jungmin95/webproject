@@ -33,4 +33,10 @@ public class ListServiceLogic implements ListService{
 		return store.readAll();
 	}
 
+
+	@Override
+	public List<Tourlist> findTop10() {
+		
+		return store.Top10();
+	}
 }

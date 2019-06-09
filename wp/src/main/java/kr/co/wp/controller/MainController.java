@@ -19,7 +19,7 @@ public class MainController {
 	//메인페이지
 	@RequestMapping(value="index.do")
 	public ModelAndView findAllList() {
-		List<Tourlist> list = service.findAll();
+		List<Tourlist> list = service.findTop10();
 		
 		ModelAndView modelAndView = new ModelAndView("main/main-page");
 		modelAndView.addObject("Tourlist", list);

@@ -173,7 +173,6 @@
 				<a href="${pageContext.request.contextPath}/list/findAll.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
 			</p>
 
-		</div>
 		<!-- End container -->
 
 		<div class="white_bg">

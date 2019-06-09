@@ -9,4 +9,5 @@ public interface ListStore {
 	Tourlist read(int list_num);
 	List<Tourlist> readByName(String list_name);
 	List<Tourlist> readAll();
+	List<Tourlist> Top10();
 }
