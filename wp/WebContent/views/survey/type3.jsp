@@ -31,6 +31,19 @@
 <script src="js/respond.min.js"></script>
 <![endif]-->
 
+<style>
+button {
+	width : 382.5px;
+	height : 247.73px;
+}
+img {
+	width : 382.5px;
+	height : 247.73px;
+}
+
+</style>
+
+
 </head>
 
 <body>
@@ -135,23 +148,23 @@
 	    	 <h2>여행 취향 <span>TEST</span></h2>
 	    </div>
 	    <form action="${pageContext.request.contextPath }/user/survey.do" method="get">
- 		<article class="feature" style="text-align:center;">
-         <div class="content" >
-            <h3>평소 역사에 관심이 있으며 체험하는 것을 좋아한다</h3>
-         </div>
-         <div class="col-md-5">
-<!--             <br><a href=""><img src="/resources/img/rice.jpg" class="img-responsive" align="middle" /></a> Yes -->
-    			<br><button type="submit" name="type" value="3"><img src="/resources/img/hanbok.jpg" alt=""><span class="text-white">Yes</span> 
-	     		</button>
-         </div>
-         <div class="col-md-5">
-            <br><a href="type4.jsp"><img src="/resources/img/legs.jpg" class="img-responsive" align="middle" /></a> No
-            	
-         </div>
-         <div class="content">
-            <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-         </div>
-         </article>
+	 		<article class="feature" style="text-align:center;">
+	         <div class="content" >
+	            <h3>평소 역사에 관심이 있으며 체험하는 것을 좋아한다</h3>
+	         </div>
+	         <div class="col-md-5">
+	<!--             <br><a href=""><img src="/resources/img/rice.jpg" class="img-responsive" align="middle" /></a> Yes -->
+	    			<br><button type="submit" name="type" value="3"><img src="/resources/img/hanbok.jpg" alt=""><span class="text-white">Yes</span> 
+		     		</button>
+	         </div>
+	         <div class="col-md-5">
+	            <br><a href="type4.jsp"><img src="/resources/img/legs.jpg" class="img-responsive" align="middle" /></a> No
+	            	
+	         </div>
+	         <div class="content">
+	            <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	         </div>
+	         </article>
          </form>
 
 	</div>

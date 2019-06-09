@@ -31,6 +31,19 @@
 <script src="js/respond.min.js"></script>
 <![endif]-->
 
+<style>
+button {
+	width : 382.5px;
+	height : 247.73px;
+}
+img {
+	width : 382.5px;
+	height : 247.73px;
+}
+
+</style>
+
+
 </head>
 
 <body>
