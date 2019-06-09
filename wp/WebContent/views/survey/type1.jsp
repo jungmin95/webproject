@@ -134,23 +134,27 @@
 		<div class="main_title">
 	    	 <h2>여행 취향 <span>TEST</span></h2>
 	    </div>
-	    
+	    <form action="${pageContext.request.contextPath }/user/survey.do" method="get">
  		<article class="feature" style="text-align:center;">
          <div class="content" >
-            <h3>타인의 시선은 별로 신경쓰지 않는 편이다</h3>
+            <h3>액션이나 공포 영화를 좋아한다</h3>
          </div>
          <div class="col-md-5">
-            <br><a href="survey7.jsp"><img src="/resources/img/joy.jpg" class="img-responsive" align="middle" /></a> Yes
-    
+<!--             <br><a href=""><img src="/resources/img/horror.jpg" class="img-responsive" align="middle" /></a> Yes -->
+    			<br><button type="submit" name="type" value="1"><img src="/resources/img/horror.jpg" alt=""><span class="text-white">Yes</span> 
+	     		</button>
          </div>
          <div class="col-md-5">
-            <br><a href="survey9.jsp"><img src="/resources/img/sad2.jpg" class="img-responsive" align="middle" /></a> No
-            
+            <br><a href="type2.jsp"><img src="/resources/img/couple.jpg" class="img-responsive" align="middle" /></a> No
+<!--             <br><button type="submit" onClick="location.href='type2.jsp'"><img src="/resources/img/horror.jpg" alt=""><span class="text-white">Yes</span>  -->
+<!-- 	     	</button> -->
          </div>
          <div class="content">
             <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
          </div>
          </article>
+         </form>
+         
 
 	</div>
 

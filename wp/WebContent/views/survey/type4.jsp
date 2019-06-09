@@ -31,6 +31,18 @@
 <script src="js/respond.min.js"></script>
 <![endif]-->
 
+<style>
+button {
+	width : 382.5px;
+	height : 247.73px;
+}
+img {
+	width : 382.5px;
+	height : 247.73px;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -134,222 +146,29 @@
 		<div class="main_title">
 	    	 <h2>여행 취향 <span>TEST</span></h2>
 	    </div>
-	    
- 		<article class="feature" style="text-align:center;">
-         <div class="content" >
-            <h3>집에 혼자 있을 때면 어디론가 떠나고 싶다</h3>
-         </div>
-         <div class="col-md-5">
-            <br><a href="survey2.jsp"><img src="/resources/img/hiking.jpg" class="img-responsive" align="middle" /></a> Yes
-    
-         </div>
-         <div class="col-md-5">
-            <br><a href="survey3.jsp"><img src="/resources/img/room.jpg" class="img-responsive" align="middle" /></a> No
-            
-         </div>
-         <div class="content">
-            <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-         </div>
-         </article>
-         
-	    
-<!--       <article class="feature" style="text-align:center;"> -->
-<!--          <div class="content" > -->
-<!--             <h3>새로운 것에 도전 하는 것을 즐긴다</h3> -->
-<!--          </div> -->
-<!--          <div class="col-md-5"> -->
-<!--             <br><img src="/resources/img/wine.jpg" class="img-responsive" align="middle" /> -->
-<!--             <input id="r3_1" name="r3" type="radio" value="1">YES<p> -->
-            
-<!--          </div> -->
-<!--          <div class="col-md-5"> -->
-<!--             <br><img src="/resources/img/sunset.jpg" class="img-responsive" /> -->
-<!--             <input id="r3_2" name="r3" type="radio" value="2">NO<p> -->
-            
-<!--          </div> -->
-<!--          <div class="content"> -->
-<!--             <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!--          </div> -->
-<!--          </article> -->
-         
-<%--          <c:choose> --%>
-         
-<%--          <c:when test="${name eq 'NO'}"> --%>
-<!--          <article class="feature" style="text-align:center;"> -->
-<!--             <div class="content" > -->
-<!--             <h3>무얼 하든지 잘 적응하는 편이다</h3> -->
-<!--          </div> -->
-<!--          <div class="col-md-5"> -->
-<!--             <br><img src="/resources/img/wine.jpg" class="img-responsive" align="middle" /> -->
-<!--             <input id="r3_1" name="r3" type="radio" value="1">YES<p> -->
-            
-<!--          </div> -->
-<!--          <div class="col-md-5"> -->
-<!--             <br><img src="/resources/img/sunset.jpg" class="img-responsive" /> -->
-<!--             <input id="r3_2" name="r3" type="radio" value="2">NO<p> -->
-            
-<!--          </div> -->
-<!--          <div class="content"> -->
-<!--             <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!--          </div> -->
-<!--          </article> -->
-<%--          </c:when> --%>
-<%--       </c:choose> --%>
-	    
-	    
-<%-- 	    <form action="${pageContext.request.contextPath}/survey/radio.do" method="POST" > --%>
-<!-- 		<article class="feature"> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<img src="/resources/img/me.jpg" class="img-responsive" alt=""> -->
-<!--           	</div> -->
-<!-- 			<div class="content"> -->
-<!-- 				<h3>나는 어떤 사람일까?</h3> -->
-<!-- 				<p><br> -->
-<!-- 					<input id="r1_1" name="r1" type="radio" value="1">나는 자유로운 사람이다<p> -->
-<!-- 					<input id="r1_2" name="r1" type="radio" value="2">나는 흥미진진한 사람이다<p> -->
-<!-- 					<input id="r1_3" name="r1" type="radio" value="3">나는 도전적인 사람이다<p> -->
-<!-- 					<input id="r1_4" name="r1" type="radio" value="4">나는 진지한 사람이다<p> -->
-				
-<!-- 					<form:radiobuttons path="r1" items="${servey.r1s }"/> -->
-<!-- 				<p> -->
-<!-- 			</div> -->
-<!-- 		</article> -->
-<!-- 		<article class="feature right"> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<img src="/resources/img/paragliding.jpg" class="img-responsive" alt="" /> -->
-<!-- 			</div> -->
-<!-- 			<div class="content"> -->
-<!-- 				<h3>패러글라이딩 기회가 주어진다면?</h3> -->
-<!-- 				<p><br> -->
-<!-- 					<input id="r2_1" name="r2" type="radio" value="1">도전해본다<p> -->
-<!-- 					<input id="r2_2" name="r2" type="radio" value="2">다음 기회에<p>				 -->
-<!-- 				<p><br><br><br><br> -->
-<!-- 			</div> -->
-<!-- 		</article> -->
-		
-<!-- 		<article class="feature left" style="text-align:center;"> -->
-<!-- 			<div class="content" > -->
-<!-- 				<h3>여행을 가서 2시간 자유시간이 주어진다면?</h3> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/wine.jpg" class="img-responsive" align="middle" /> -->
-<!-- 				<input id="r3_1" name="r3" type="radio" value="1">와인 한잔<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/sunset.jpg" class="img-responsive" /> -->
-<!-- 				<input id="r3_2" name="r3" type="radio" value="2">석양 보기<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="content"> -->
-<!-- 				<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- 			</div> -->
-<!-- 		</article> -->
-		
-<!-- 		<article class="feature right" style="text-align:center;"> -->
-<!-- 			<div class="content" > -->
-<!-- 				<h3>바다에 가면 나는?</h3> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/surfboard.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r4_1" name="r4" type="radio" value="1">서핑<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/beach.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r4_2" name="r4" type="radio" value="2">휴식<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="content"> -->
-<!-- 				<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- 			</div> -->
-<!-- 		</article> -->
+	    <form action="${pageContext.request.contextPath }/user/survey.do" method="get">
+	 		<article class="feature" style="text-align:center;">
+	         <div class="content" >
+	            <h3>여행은 쉬기 위해 가는 것이라고 생각한다</h3>
+	         </div>
+	         <div class="col-md-5">
+	<%--             <br><a id="D" href="${pageContext.request.contextPath }/survey/survey.do"><img src="/resources/img/sns.jpg" class="img-responsive" align="middle" /></a> Yes --%>
+	    		<br><button type="submit" name="type" value="4"><img src="/resources/img/rest.jpg" alt=""><span class="text-white">Yes</span> 
+	     		</button>
+	    	 </div>
+	    	 
+	         <div class="col-md-5">
+	<%--             <br><a id="C" href="${pageContext.request.contextPath }/survey/survey.do"><img src="/resources/img/phone.jpg" class="img-responsive" align="middle" /></a> No --%>
+	             <br><button type="submit" name="type" value="3"><img src="/resources/img/jump2.jpg" alt=""><span class="text-white">No</span> 
+	    		</button> 
+	         </div>
+	         <div class="content">
+	            <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	         </div>
+	         </article>
+         </form>
 
-<!-- 		<article class="feature right" style="text-align:center;"> -->
-<!-- 			<div class="content" > -->
-<!-- 				<h3>지금 당장 하루의 휴가가 주어진다면 어디로?</h3> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/art.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r5_1" name="r5" type="radio" value="1">박물관<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/city.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r5_2" name="r5" type="radio" value="2">도심<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="content"> -->
-<!-- 				<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- 			</div> -->
-<!-- 		</article> -->
-		
-<!-- 		<article class="feature right" style="text-align:center;"> -->
-<!-- 			<div class="content"> -->
-<!-- 				<h3>당신이 즐겨 찍는 사진은?</h3> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/food.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r6_1" name="r6" type="radio" value="1">음식<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/photo.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r6_2" name="r6" type="radio" value="2">풍경<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="content"> -->
-<!-- 				<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- 			</div> -->
-<!-- 		</article> -->
-		
-<!-- 		<article class="feature right" style="text-align:center;"> -->
-<!-- 			<div class="content"> -->
-<!-- 				<h3>친구와 함께하는 여행 컨셉은?</h3> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/healing.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r7_1" name="r7" type="radio" value="1">힐링<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/party.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r7_2" name="r7" type="radio" value="2">파티<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="content"> -->
-<!-- 				<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- 			</div> -->
-<!-- 		</article> -->
-		
-		
-<!-- 		<article class="feature right" style="text-align:center;"> -->
-<!-- 			<div class="content"> -->
-<!-- 				<h3>여행 지역에서 반드시 경험해야 하는 것?</h3> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/history.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r8_1" name="r8" type="radio" value="1">역사<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="col-md-5"> -->
-<!-- 				<br><img src="/resources/img/food2.jpg" class="img-responsive" alt="" /> -->
-<!-- 				<input id="r8_2" name="r8" type="radio" value="2">맛집<p> -->
-				
-<!-- 			</div> -->
-<!-- 			<div class="content"> -->
-<!-- 				<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- 			</div> -->
-<!-- 		</article> -->
-		
-<!-- 		<p class="text-center add_bottom_30"> -->
-<!-- 			<button class="button_drop outline" type="submit">작성 완료</button> -->
-<!--             <a href="${pageContext.request.contextPath}/survey/survey.do" class="btn_1 outline">완료</a> -->
-<!-- 		</p> -->
-<!-- 		</form> -->
 	</div>
-    
-
 
 <div class="container margin_60">
 
@@ -441,7 +260,7 @@ Web Project
 <script type="text/javascript" src="/resources/js/revolution_func.js""></script>
 <!-- <script src="js/tabs.js"></script> -->
 <script type="text/javascript" src="/resources/js/tabs.js""></script>
-<script>new CBPFWTabs( document.getElementById( 'tabs' ) );</script>
+
 
 </body>
 

@@ -137,14 +137,14 @@
 	    
  		<article class="feature" style="text-align:center;">
          <div class="content" >
-            <h3>긍정적이란 말을 자주 듣는다</h3>
+            <h3>시끄러운 곳 보다는 조용한 곳이 좋다</h3>
          </div>
          <div class="col-md-5">
-            <br><a href="survey8.jsp"><img src="/resources/img/smile.jpg" class="img-responsive" align="middle" /></a> Yes
+            <br><a href="type4.jsp"><img src="/resources/img/sunset.jpg" class="img-responsive" align="middle" /></a> Yes
     
          </div>
          <div class="col-md-5">
-            <br><a href="survey10.jsp"><img src="/resources/img/sad3.jpg" class="img-responsive" align="middle" /></a> No
+            <br><a href="type1.jsp"><img src="/resources/img/noisy.jpg" class="img-responsive" align="middle" /></a> No
             
          </div>
          <div class="content">

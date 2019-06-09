@@ -134,27 +134,23 @@
 		<div class="main_title">
 	    	 <h2>여행 취향 <span>TEST</span></h2>
 	    </div>
-	    <form action="${pageContext.request.contextPath }/user/survey.do" method="get">
+	    
  		<article class="feature" style="text-align:center;">
          <div class="content" >
-            <h3>나의 여행 테마는 식도락 여행이다</h3>
+            <h3>긍정적이란 말을 자주 듣는다</h3>
          </div>
          <div class="col-md-5">
-<!--             <br><a href=""><img src="/resources/img/rice.jpg" class="img-responsive" align="middle" /></a> Yes -->
-    			<br><button type="submit" name="type" value="3"><img src="/resources/img/rice.jpg" alt=""><span class="text-white">Yes</span> 
-	     		</button>
+            <br><a href="type2.jsp"><img src="/resources/img/smile.JPG" class="img-responsive" align="middle" /></a> Yes
+    
          </div>
          <div class="col-md-5">
-<!--             <br><a href="survey10.jsp"><img src="/resources/img/yoga.jpg" class="img-responsive" align="middle" /></a> No -->
-            	<br><input type="button" onClick="location.href='survey10.jsp'"><img src="/resources/img/yoga.jpg" alt=""><span class="text-white">No</span> 
-	     		
+            <br><a href="type3.jsp"><img src="/resources/img/sad3.jpg" class="img-responsive" align="middle" /></a> No
+            
          </div>
          <div class="content">
             <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
          </div>
          </article>
-         </form>
-         
 
 	</div>
 

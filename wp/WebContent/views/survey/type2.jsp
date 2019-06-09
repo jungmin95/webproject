@@ -134,24 +134,25 @@
 		<div class="main_title">
 	    	 <h2>여행 취향 <span>TEST</span></h2>
 	    </div>
-	    
+	    <form action="${pageContext.request.contextPath }/user/survey.do" method="get">
  		<article class="feature" style="text-align:center;">
          <div class="content" >
-            <h3>여행 시, 명소는 꼭 가보는 편이다</h3>
+            <h3>여행 지역의 축제나 문화에 관심이 많다</h3>
          </div>
          <div class="col-md-5">
-            <br><a href="survey7.jsp"><img src="/resources/img/paris.jpg" class="img-responsive" align="middle" /></a> Yes
-    
+<!--             <br><a href=""><img src="/resources/img/friend.jpg" class="img-responsive" align="middle" /></a> Yes -->
+    			<br><button type="submit" name="type" value="2"><img src="/resources/img/fireworks.jpg" alt=""><span class="text-white">Yes</span> 
+	     		</button>
          </div>
          <div class="col-md-5">
-            <br><a href="survey10.jsp"><img src="/resources/img/legs.jpg" class="img-responsive" align="middle" /></a> No
+            <br><a href="type3.jsp"><img src="/resources/img/guitarist.jpg" class="img-responsive" align="middle" /></a> No
             
          </div>
          <div class="content">
             <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
          </div>
          </article>
-
+         </form>
 	</div>
 
 <div class="container margin_60">
