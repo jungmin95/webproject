@@ -82,6 +82,9 @@
 							</form>
 					</c:when>
 						<c:otherwise>
+						<c:if test = "${user_id == 'KSY'}">
+							<li><a href="wishlist.html" id="wishlist_link">리스트 추가</a></li>
+						</c:if>
 							<b>${user_id}</b> 님 환영합니다. [<a href="${pageContext.request.contextPath}/user/logout.do">로그아웃</a>]
  						</c:otherwise>
 				</c:choose>
