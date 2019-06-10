@@ -168,7 +168,7 @@
                                         <label>성별<sup>*</sup>
                                         </label>
                                         <br>
-                                        <input type="text" name="user_sex" value="" placeholder="성별 ex) 20세 -> 20" class="form-control">
+                                        <input type="text" name="user_sex" value="" placeholder="성별 " class="form-control">
                                     </div>
                                     <div class="form-group col-md-7 col-sm-6 col-xs-12">
                                         <label>이름<sup>*</sup>
