@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-	response.sendRedirect(request.getRequestURL()+"index.do"); 
+	response.sendRedirect(request.getRequestURL()+"main/index.do"); 
 %>
 <html>
 <head>

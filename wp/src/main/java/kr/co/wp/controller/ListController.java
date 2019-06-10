@@ -53,21 +53,19 @@ public class ListController {
 	}
 	
 	@RequestMapping(value ="create.do" ,method= RequestMethod.GET)
-	public String CreateList(Model model) {
-		
-		
+	public String CreateList() {
 		
 		return "redirect:/views/gallery/create.jsp";
 	}
 	
-	@RequestMapping(value ="create.do" ,method= RequestMethod.POST)
+	@RequestMapping(value ="create.do" , method= RequestMethod.POST)
 	public String CreateList(Model model ,@RequestParam("tour_areaname") String tour_areaname,@RequestParam("tourname") String tourname,@RequestParam("type") String type
 			,@RequestParam("tourtype") String tourtype,@RequestParam("tourlocation") String tourlocation,@RequestParam("tourstory") String tourstory
 			,@RequestParam("file") String file) {
 		
 		
 		
-		return null;
+		return "redirect:/gallery/list";
 	}
 
 

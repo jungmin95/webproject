@@ -38,7 +38,7 @@ public class UserController {
 //	   System.out.println(user.getId());
 	   
 	   if(user.getType()>0) {
-		   return "main/main-page";
+		   return "redirect:/main/index.do";
 	   }  
 	   return "redirect:/views/survey/main.jsp";
    }
@@ -48,7 +48,7 @@ public class UserController {
       
 	   session.invalidate();
 	 
-      return "main/main-page";
+      return "redirect:/main/index.do";
    }
    
    @RequestMapping(value ="join.do",method= {RequestMethod.POST,RequestMethod.GET})
@@ -65,7 +65,7 @@ public class UserController {
      
      service.register(user); 
      
-      return "main/main-page";
+      return "redirect:/main/index.do";
    
    }
    
@@ -84,7 +84,7 @@ public class UserController {
 	   
 	   service.survey(user);
 	   
-	   return "main/main-page";
+	   return "redirect:/main/index.do";
    }
    
 }

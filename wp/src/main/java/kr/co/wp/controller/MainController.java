@@ -11,6 +11,7 @@ import kr.co.wp.domain.Tourlist;
 import kr.co.wp.service.ListService;
 
 @Controller
+@RequestMapping(value="main")
 public class MainController {
 
 	@Autowired
