@@ -65,12 +65,13 @@ body{
 								<input type="hidden" name="tournum" value="${tour.tournum}">
  								<input type="submit" value="마이페이지"> 
  							</form> 
-							<a href ="${path}list.do">여행지 목록</a>
+							<a href ="${path}/findAll.do">여행지 목록</a>
 						</td>
  					</tr>
  				</table> 
 			</td> 
 		</tr> 
- 	</table>						
+ 	</table>
+ <%@ include file="../gallery/DetailComment.jsp" %>							
  </body>
 </html>
