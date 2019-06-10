@@ -282,8 +282,7 @@ table thead th {
 
 	<div class="content-wrap">
 		<div class="descrip">
-			<form id="boardFrm" action="/board/insert" method="post"
-				enctype="multipart/form-data">
+			<form id="create_list" action="${pageContext.request.contextPath}/list/crate.do" method="post" enctype="multipart/form-data">
 				<table>
 					<tbody>
 						<tr>
@@ -298,7 +297,7 @@ table thead th {
 											</td>
 											<td
 												style="border-color: #ddd; border-top-color: #414a60; border-top-width: 2px;">
-												<input title="input" type="text" name="title"
+												<input title="input" type="text" name="tour_areaname"
 												maxlength="100"
 												style="width: 100%; height: 26px; border: none;">
 											</td>
@@ -308,7 +307,7 @@ table thead th {
 											</td>
 											<td
 												style="border-color: #ddd; border-top-color: #414a60; border-top-width: 2px;">
-												<input title="input" type="text" name="author"
+												<input title="input" type="text" name="tourname"
 												maxlength="100"
 												style="width: 100%; height: 26px; border: none;">
 											</td>
@@ -320,38 +319,32 @@ table thead th {
 											</td>
 											<td style="border-color: #ddd;"><select
 												style="width: 60%; margin-left: 10px;">
-													<option name="field" selected>------테마 선택------</option>
+													<option name="tourtype" selected>------테마 선택------</option>
 													<option>-액티비티형</option>
 													<option>-욜로형</option>
 													<option>-역사탐방형</option>
 													<option>-힐링형</option>
 													<option>-기타</option>
 											</select></td>
-											<td
-												style="border-color: #ddd; background-color: #eee; text-align: center;">
-												<span style="color: #000000; font-size: 12px;">여행날짜</span>
-											</td>
-											<td style="border-color: #ddd;"><input title="input"
-												type="text" name="published_date" maxlength="100"
-												style="width: 100%; height: 26px; border: none;"></td>
+							
 										</tr>
 										<tr style="height: 300px;">
 											<td
 												style="border-color: #ddd; background-color: #eee; text-align: center;">
-												<span style="color: #000000; font-size: 12px;">상세 경로</span>
+												<span style="color: #000000; font-size: 12px;">여행지 위치</span>
 											</td>
 											<td colspan=3 style="border-color: #ddd;"><textarea
-													name="list" rows="10" cols="100"
+													name="tourlocation" rows="10" cols="100"
 													style="height: 380px; width: 100%; border: none;"></textarea>
 											</td>
 										</tr>
 										<tr style="height: 400px;">
 											<td
 												style="border-color: #ddd; background-color: #eee; text-align: center;">
-												<span style="color: #000000; font-size: 12px;">여행 비용</span>
+												<span style="color: #000000; font-size: 12px;">여행지 소개</span>
 											</td>
 											<td colspan=3 style="border-color: #ddd;"><textarea
-													name="content" id="ir1" rows="10" cols="100"
+													name="tourstory" id="ir1" rows="10" cols="100"
 													style="height: 380px; width: 100%;"></textarea></td>
 										</tr>
 										<tr>
@@ -361,16 +354,15 @@ table thead th {
 											</td>
 											<td colspan=3
 												style="border-color: #ddd; border-bottom-color: #414a60; border-bottom-width: 2px;">
-												<input type="file" style="width: 100%; height: 26px;" />
+												<input name="file" type="file" style="width: 100%; height: 26px;" />
 											</td>
 										</tr>
 									</tbody>
 								</table> <input type="hidden" name="board_code" value="news" />
 
 								<div class="marg-t-15 text-right">
-									<input type="button" class="btn" value="확인" id="save" /> <input
-										type="button" class="btn" value="취소"
-										onclick="javascript:history.back(-1);" />
+									<input type="button" class="btn" value="확인" id="save" /> 
+									<input type="button" class="btn" value="취소" onclick="javascript:history.back(-1);" />
 
 								</div>
 							</td>

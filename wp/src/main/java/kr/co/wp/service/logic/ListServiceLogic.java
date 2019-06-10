@@ -39,4 +39,10 @@ public class ListServiceLogic implements ListService{
 		
 		return store.Top10();
 	}
+
+	@Override
+	public boolean register(Tourlist list) {
+		
+		return store.create(list);
+	}
 }

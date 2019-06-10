@@ -11,4 +11,5 @@ public interface ListService {
 	List<Tourlist> findByName(String list_name);
 	List<Tourlist> findAll();
 	List<Tourlist> findTop10();
+	boolean register(Tourlist list);
 }

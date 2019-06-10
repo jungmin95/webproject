@@ -171,4 +171,36 @@ public class ListStoreLogic implements ListStore{
 		return lists;
 	}
 
+
+	@Override
+	public boolean create(Tourlist list) {
+		Connection connection = null;
+		PreparedStatement psmt = null;
+		int createdCount = 0;
+		try {
+			connection = connectionFactory.createConnection();
+			
+			psmt = connection.prepareStatement("INSERT INTO PROJECT_list(list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank) VALUES (?,?,?,?,?,?,?,?,?)");
+			
+			psmt.setInt(1, list.getList_num());
+			psmt.setString(2, list.getUserid());
+			psmt.setString(3, list.getTourimg());
+			psmt.setString(4, list.getTour_areaname());
+			psmt.setString(5, list.getTourname());
+			psmt.setString(6, list.getTourLocation());
+			psmt.setString(7, list.getTourstory());
+			psmt.setString(8, list.getTourtype());
+			psmt.setInt(9, list.getTourRank());
+	
+			createdCount = psmt.executeUpdate();
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		} finally {
+			JdbcUtils.Close(psmt, connection);
+		}
+
+		return createdCount > 0;
+	}
+
 }

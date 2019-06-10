@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -50,6 +52,24 @@ public class ListController {
 		return modelAndView;
 	}
 	
+	@RequestMapping(value ="create.do" ,method= RequestMethod.GET)
+	public String CreateList(Model model) {
+		
+		
+		
+		return "redirect:/views/gallery/create.jsp";
+	}
+	
+	@RequestMapping(value ="create.do" ,method= RequestMethod.POST)
+	public String CreateList(Model model ,@RequestParam("tour_areaname") String tour_areaname,@RequestParam("tourname") String tourname,@RequestParam("type") String type
+			,@RequestParam("tourtype") String tourtype,@RequestParam("tourlocation") String tourlocation,@RequestParam("tourstory") String tourstory
+			,@RequestParam("file") String file) {
+		
+		
+		
+		return null;
+	}
+
 
 	
 }

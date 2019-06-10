@@ -83,12 +83,12 @@
 					</c:when>
 						<c:otherwise>
 						<c:if test = "${user_id == 'KSY'}">
-							<li><a href="wishlist.html" id="wishlist_link">리스트 추가</a></li>
+							<li><a href="${pageContext.request.contextPath}/list/create.do" id="addlist">리스트 추가</a></li>
 						</c:if>
 							<b>${user_id}</b> 님 환영합니다. [<a href="${pageContext.request.contextPath}/user/logout.do">로그아웃</a>]
  						</c:otherwise>
 				</c:choose>
-						<li><a href="wishlist.html" id="wishlist_link">즐겨찾기</a></li>
+						<li><a href="wishlist.html" id="wishlist_link">my page</a></li>
 					</ul>
 				</div>
 			</div>
