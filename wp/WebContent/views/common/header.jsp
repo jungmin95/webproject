@@ -157,8 +157,8 @@
 						<li class="submenu"><a href="javascript:void(0);"
 							class="show-submenu">게시판 <i class="icon-down-open-mini"></i></a>
 						<ul>
-								<li><a href="/gallery/create">모두의 게시판</a></li>
-								<li><a href="create">나만의 게시판</a></li>
+								<li><a href="${pageContext.request.contextPath}/article/list.do">모두의 게시판</a></li>
+								<li><a href="${pageContext.request.contextPath}/article/mylist.do">나만의 게시판</a></li>
 							</ul></li>
 
 
