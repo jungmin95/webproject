@@ -94,22 +94,32 @@ public class ArticleController {
 	}
 	
 	@RequestMapping(value ="remove.do", method= RequestMethod.GET)
-	public String remove(Integer articleNo) {
+	public String remove(HttpSession session, Integer articleNo) {
 		
-		service.delete(articleNo);
+		Article article = service.read(articleNo);
 		
+		//System.out.println(session.getAttribute("user_id"));
+		//System.out.println(article.getUserId());
+		
+		if(session.getAttribute("user_id").equals(article.getUserId()) || session.getAttribute("user_id").equals("KSY")) {
+			
+			service.delete(articleNo);
+		}
 		return "redirect:/article/list.do";
 	}
 	
 	@RequestMapping(value ="modify.do", method= RequestMethod.GET)
-	public String modify(Integer articleNo, Model model) {
+	public String modify(HttpSession session, Integer articleNo, Model model) {
 		
-		//System.out.println(articleNo);
 		Article article = service.read(articleNo);
 		
-		model.addAttribute("Article", article);
-		
-		return "board/modify";
+		if(session.getAttribute("user_id").equals(article.getUserId()) || session.getAttribute("user_id").equals("KSY")) {
+
+			model.addAttribute("Article", article);
+			
+			return "board/modify";
+		}
+		return "redirect:/article/list.do";
 	}
 	
 	@RequestMapping(value ="update.do", method= {RequestMethod.POST,RequestMethod.GET})
@@ -127,12 +137,17 @@ public class ArticleController {
 	}
 	
 	@RequestMapping(value ="mymodify.do", method= RequestMethod.GET)
-	public String mymodify(Integer articleNo, Model model) {
+	public String mymodify(HttpSession session, Integer articleNo, Model model) {
 		
 		Article article = service.read(articleNo);
-		model.addAttribute("Article", article);
 		
-		return "board/mymodify";
+		if(session.getAttribute("user_id").equals(article.getUserId()) || session.getAttribute("user_id").equals("KSY")) {
+
+			model.addAttribute("Article", article);
+			
+			return "board/mymodify";
+		}
+		return "redirect:/article/list.do";
 	}
 	
 	@RequestMapping(value ="myupdate.do", method= {RequestMethod.POST,RequestMethod.GET})
