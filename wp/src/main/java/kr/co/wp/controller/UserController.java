@@ -24,10 +24,12 @@ public class UserController {
       
 	   user.setId(user_id);
 	   user.setPw(user_pw);
+	   user.getType();
 	   User logindeUser = service.login(user);
 	   if(logindeUser != null) {
 	   session.setAttribute("user_id", user_id);
 	   session.setAttribute("user_pw", user_pw);
+	   session.setAttribute("type", user.getType());
 	   }else {
 		   session.invalidate();
 	   }
