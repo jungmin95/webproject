@@ -145,7 +145,8 @@
                        <div class="ribbon_3 popular"><span>BEST ${sts.count}</span>
                         </div>
                         <div class="img_container">
-                            <a href="detail?list_Id=${Tourlist.list_num}">
+                                                    <input type="hidden" name="list_num" value="${Tourlist.list_num}">
+                            <a href="${pageContext.request.contextPath}/list/detail.do?list_num=${Tourlist.list_num}">
                                 <img src="/resources/img/${Tourlist.tourimg}" class="img-responsive" alt="Image">
                             </a>
                         </div>
