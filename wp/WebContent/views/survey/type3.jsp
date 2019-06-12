@@ -67,7 +67,7 @@ img {
 <!-- Mobile menu overlay mask -->
 
 <!-- Header================================================== -->
-
+<%@ include file="../common/header.jsp" %>
 <!-- End Header -->
 <main>
 <!-- Slider -->
