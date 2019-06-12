@@ -135,7 +135,7 @@
 		
 
             <div class="main_title">
-                <h2>Best <span>Top 10</span></h2>
+                <h2>MY TYPE <span>Top 10</span></h2>
             </div>
 
          <div class="row">
