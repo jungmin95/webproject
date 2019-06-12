@@ -28,14 +28,17 @@
 
 <style>
 body{
-	background: #f9f9f9;
-	font-size: 12px;
-	line-height: 20px;
-	font-family:"Montserrat", Arial, sans-serif;
-	color: #565a5c;
-	-webkit-font-smoothing: antialiased;
-	margin-top: 13%;
+   background: #f9f9f9;
+   font-size: 12px;
+   line-height: 20px;
+   font-family:"Montserrat", Arial, sans-serif;
+   color: #565a5c;
+   -webkit-font-smoothing: antialiased;
+   margin-top: 13%;
 
+}
+td{
+   min-width: 100px;
 }
 
 </style>
@@ -43,35 +46,53 @@ body{
 <body>
 
 <%@ include file="../common/header.jsp" %>
-<h2>여행지 상세정보</h2>
-	<table border = "1">
- 		<tr> 
- 			<td> 
-				<img src="${path}/images/${tour.tourimg}" width="500" height="400">
- 			</td>
- 			<td>
- 				<table border="1" style="height: 400px; width: 500px;">
- 					<tr align="center">
-						<td>지역 이름</td>
-						<td>${tour.tourName}</td>
-					</tr> 
-				<tr align="center">
-					<td>여행지 설명</td> 
-						<td>${tour.tourstory}</td>
-				</tr>
-			<tr align="center"> 
- 						<td colspan="2"> 
-							<form name="form1" method="post" action="${path}/">
-								<input type="hidden" name="tournum" value="${tour.tournum}">
- 								<input type="submit" value="마이페이지"> 
- 							</form> 
-							<a href ="${path}/findAll.do">여행지 목록</a>
-						</td>
- 					</tr>
- 				</table> 
-			</td> 
-		</tr> 
- 	</table>
- <%@ include file="../gallery/DetailComment.jsp" %>							
+<h2 style="text-align: center;">여행지 상세정보</h2>
+
+   <table border = "1" style= "margin-left : 10%">
+       <tr> 
+          <td> 
+           <input type="hidden" name="list_num" value="${list.list_num}">
+           <input type="hidden" name="list_num" value="${list.tourimg}">
+            <img src="/resources/img/${list.tourimg}" width="500" height="400">
+          </td>
+          <td>
+             <table border="1" style="height: 400px; width: 500px;">
+                <tr align="center">
+                  <td>지역 이름</td>
+                  <td>${list.tourname}</td>
+               </tr> 
+            <tr align="center">
+               <td>여행지 설명</td> 
+                  <td>${list.tourstory}</td>
+            </tr>
+         <tr align="center"> 
+                   <td colspan="2"> 
+                     <form name="form1" method="post" action="${path}/">
+                        <input type="hidden" name="tournum" value="${list.list_num}">
+                         <input type="submit" value="마이페이지"> 
+                      </form> 
+                      <input type="hidden" name="tour_name" value="${list.tour_areaname}">
+                   
+                      
+                     <a href ="${pageContext.request.contextPath}/list/findbyAll.do">여행지 목록</a>
+                     
+<%--                       <c:if ${list.tour_areaname} vlaue="${list.tour_areaname eq 경기}"> --%>
+<%--                      <a href ="${pageContext.request.contextPath}/list/findbyGyeonggi.do">여행지 목록</a> --%>
+<%--                      </c:if> --%>
+                  </td>
+                </tr>
+             </table> 
+         </td> 
+      </tr> 
+    </table>
+    <input type="hidden" name="list_num" value="${list.list_num}">
+    <a href="${pageContext.request.contextPath}/list/remove.do?list_num=${list.list_num}">삭제</a>
+<!--     <form action=> -->
+<!--     <div class="marg-t-15 col-xs-6 text-left padding-null">  -->
+<!--       <input type="button" class="btn" value="삭제" id="delete-btn" /> -->
+<!--          </div> -->
+<!--          </form> -->
+      <%@ include file="../gallery/DetailComment.jsp" %>      
+  <%@ include file="../common/footer.jsp" %>               
  </body>
 </html>

@@ -152,8 +152,9 @@ height: auto;
                 <div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
                     <div class="tour_container">
                        
-                        <div class="img_container">
-                            <a href="detail?list_Id=${Tourlist.list_num}">
+                      <div class="img_container">
+                        <input type="hidden" name="list_num" value="${Tourlist.list_num}">
+                            <a href="detail.do?list_num=${Tourlist.list_num}">
                                 <img src="/resources/img/${Tourlist.tourimg}" class="img-responsive" alt="Image">
                             </a>
                         </div>
