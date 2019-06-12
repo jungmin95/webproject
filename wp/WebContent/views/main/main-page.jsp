@@ -135,7 +135,7 @@
 		
 
             <div class="main_title">
-                <h2>MY TYPE <span>Top 10</span></h2>
+                <h2>${user.type}<span>Top 9</span></h2>
             </div>
 
          <div class="row">
@@ -170,10 +170,9 @@
 
         </div>
 			<!-- End row -->
-			<p class="text-center add_bottom_30">
-				<a href="${pageContext.request.contextPath}/list/findAll.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
-			</p>
-
+                  <p class="text-center add_bottom_30">
+            <a href="${pageContext.request.contextPath}/list/findAll.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+         </p>
 		<!-- End container -->
 
 		<div class="white_bg">
