@@ -30,6 +30,10 @@ public class ArticleController {
 	@RequestMapping(value ="regist.do", method= RequestMethod.POST)
 	public String regist(HttpSession session, Article article, @RequestParam("title") String title, @RequestParam("contents") String contents) {
 		
+		if(session.getAttribute("user_id") == null) {
+			return "redirect:/article/list.do";
+		}
+		
 		article.setUserId((String)session.getAttribute("user_id"));
 		article.setTitle(title);
 		article.setContents(contents);		   
