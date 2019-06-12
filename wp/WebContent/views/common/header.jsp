@@ -145,15 +145,7 @@
 								<li><a href="${pageContext.request.contextPath}/list/findByHistory.do">역사탐방형</a></li>
 								<li><a href="${pageContext.request.contextPath}/list/findByHealing.do">힐링형</a></li>
 							</ul></li>
-						<li class="submenu"><a href="javascript:void(0);"
-							class="show-submenu">인원 <i class="icon-down-open-mini"></i></a>
-						<ul>
-								<li><a href="${pageContext.request.contextPath}/list/findAll.do">혼행</a></li>
-								<li><a href="${pageContext.request.contextPath}/list/findAll.do">커플</a></li>
-								<li><a href="${pageContext.request.contextPath}/list/findAll.do">4인 이하</a></li>
-								<li><a href="${pageContext.request.contextPath}/list/findAll.do">5인 이상</a></li>
-							</ul></li>
-
+	
 						<li class="submenu"><a href="javascript:void(0);"
 							class="show-submenu">게시판 <i class="icon-down-open-mini"></i></a>
 						<ul>
