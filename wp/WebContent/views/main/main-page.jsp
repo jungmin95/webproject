@@ -170,9 +170,60 @@
 
         </div>
 			<!-- End row -->
+			
+			<c:choose>
+			<c:when test = "${type == 1}">
                   <p class="text-center add_bottom_30">
+            <a href="${pageContext.request.contextPath}/list/findByActivity.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+         </p>
+        	 </c:when>
+        	 <c:when test = "${type == 2}">
+                  <p class="text-center add_bottom_30">
+            <a href="${pageContext.request.contextPath}/list/findByYolo.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+         </p>
+        	 </c:when>
+        	 <c:when test = "${type == 3}">
+                  <p class="text-center add_bottom_30">
+            <a href="${pageContext.request.contextPath}/list/findByHistory.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+         </p>
+        	 </c:when>
+        	 <c:when test = "${type == 4}">
+                  <p class="text-center add_bottom_30">
+            <a href="${pageContext.request.contextPath}/list/findByHealing.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+         </p>
+        	 </c:when>
+        	 <c:otherwise>
+        	  <p class="text-center add_bottom_30">
             <a href="${pageContext.request.contextPath}/list/findAll.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
          </p>
+        	 </c:otherwise>
+          </c:choose>
+
+<%-- 			<c:if test = "${type == 1}"> --%>
+<!-- 			  <p class="text-center add_bottom_30"> -->
+<%--             <a href="${pageContext.request.contextPath}/list/findByActivity.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a> --%>
+<!--          	</p> -->
+<%-- 			</c:if> --%>
+<%-- 			<c:if test = "${type == 2}"> --%>
+<!-- 			  <p class="text-center add_bottom_30"> -->
+<%--             <a href="${pageContext.request.contextPath}/list/findByYolo.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a> --%>
+<!--          	</p> -->
+<%-- 			</c:if> --%>
+<%-- 			<c:if test = "${type == 3}"> --%>
+<!-- 			  <p class="text-center add_bottom_30"> -->
+<%--             <a href="${pageContext.request.contextPath}/list/findByHistory.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a> --%>
+<!--          	</p> -->
+<%-- 			</c:if> --%>
+<%-- 			<c:if test = "${type == 4}"> --%>
+<!-- 			  <p class="text-center add_bottom_30"> -->
+<%--             <a href="${pageContext.request.contextPath}/list/findByHealing.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a> --%>
+<!--          	</p> -->
+<%-- 			</c:if>	 --%>
+			
+<!-- 			<p class="text-center add_bottom_30"> -->
+<%--             <a href="${pageContext.request.contextPath}/list/findAll.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a> --%>
+<!--          	</p> -->
+										
 		<!-- End container -->
 
 		<div class="white_bg">

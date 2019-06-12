@@ -32,24 +32,28 @@ public class MainController {
 				List<Tourlist> list = service.findByActivity_9();
 				ModelAndView modelAndView = new ModelAndView("main/main-page");
 				modelAndView.addObject("Tourlist", list);
+				modelAndView.addObject("type", user.getType());
 				return modelAndView;
 			}
 			else if(user.getType() == 2) {
 				List<Tourlist> list = service.findByYolo_9();
 				ModelAndView modelAndView = new ModelAndView("main/main-page");
 				modelAndView.addObject("Tourlist", list);
+				modelAndView.addObject("type", user.getType());
 				return modelAndView;
 			}
 			else if(user.getType() == 3) {
 				List<Tourlist> list = service.findByHistory_9();
 				ModelAndView modelAndView = new ModelAndView("main/main-page");
 				modelAndView.addObject("Tourlist", list);
+				modelAndView.addObject("type", user.getType());
 				return modelAndView;
 			}
 			else if(user.getType() == 4) {
 				List<Tourlist> list = service.findByHealing_9();
 				ModelAndView modelAndView = new ModelAndView("main/main-page");
 				modelAndView.addObject("Tourlist", list);
+				modelAndView.addObject("type", user.getType());
 				return modelAndView;
 			}
 		}
