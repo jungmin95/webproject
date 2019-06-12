@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
 
 <!DOCTYPE html>
 <html lang="UTF-8">
@@ -136,82 +134,77 @@
 	<div class="container margin_60">
 	<div class="container">
  		<div class="main_title">
-    	 <h2>나만의 <span>게시판</span></h2>
+    	 <h2>모두의 <span>게시판</span></h2>
    		</div>
 	   		
 	    <div class="row">
-	       
-<!-- 	        <div style="z-index:1020" class="col-xs-12 col-sm-3 col-md-3 col-lg-3"> -->
-<!-- 	            <div class="list-group panel panel-success"> -->
-<!-- 	                <div class="panel-heading list-group-item text-center hidden-xs"> -->
-<!-- 	                    <h4>게시판</h4> -->
-<!-- 	                </div> -->
-<!-- 	                <div> -->
-<%-- 	                    <c:forEach var="board" items="${boards}"> --%>
-<%-- 		                    <a href="${pageContext.request.contextPath}/board/find.do?boardId=${board.boardId}" --%>
-<%-- 		                       class="list-group-item hidden-xs">${board.name}</a> --%>
-<%-- 	       				</c:forEach> --%>
-<!-- 	                </div> -->
-	
-<!-- 	            </div> -->
-<!-- 	        </div> -->
-	   		
-	        <div class="col-sm-9 col-lg-9">
-<!-- 	            <div> -->
-<%-- 	                <h3>${boardDetail.name}</h3> --%>
-<!-- 	            </div> -->
-	            <div style = "padding: 0px 0px 0px 250px;">  
+<!-- 			<div class="panel panel-default"> -->
+<!--                 <div class="panel-heading"> -->
+<%--                    ${Article.title} --%>
+<!--                 </div> -->
+<!--                 <div class="panel-body"> -->
+<!--                     <div class="post"> -->
+                        
+<%--                          <strong>${Article.userId}</strong> --%>
+<%--                          &nbsp;<span class="text-muted">${User.age}</span> --%>
+<%--                          &nbsp;<span class="text-muted">${User.sex}</span> --%>
 
-	            <div class="table-responsive" >
-	                <table class="table table-striped table-bordered table-hover">
-	                    <colgroup>
-	                        <col width="100"/>
-	                        <col width="*"/>
-	                        <col width="120"/>
-	                        <col width="70"/>
-	                        <col width="50"/>
-	                    </colgroup>
-	                    <thead>
-	                    <tr>
-	                        <th class="text-center">번호</th>
-	                        <th class="text-center">제목</th>
-	                        <th class="text-center">작성일</th>
-	                        <th class="text-center">작성자</th>
-	                        <th class="text-center">조회</th>
-	                    </tr>
-	                    </thead>
-	                    <tbody>
-	                    	<c:choose>
-	                    		<c:when test="${empty Article}">
-			                        <tr>
-			                            <th colspan=5 class="text-center">게시물이 존재하지 않습니다.</th>
-			                        </tr>
-	                    		</c:when>
-	                    		<c:otherwise>
-	                    			<c:forEach var="Article" items="${Article}">
-				                        <tr>
-				                            <td class="text-center">${Article.articleNo}</td>
-				                            <td>
-				                            	<a href="${pageContext.request.contextPath}/article/myread.do?articleNo=${Article.articleNo}">${Article.title}</a>
-				                            </td>
-				                            <td class="text-center">
-				                            	<fmt:formatDate value="${Article.date}" pattern="yyyy-MM-dd"/>
-				                            </td>
-				                            <td class="text-center">${Article.userId}</td>
-				                            <td class="text-center">10</td>
-				                        </tr>
-			                        </c:forEach>
-	                    		</c:otherwise>
-	                    	</c:choose>
-	                    </tbody>
-	                </table>
-	            </div>
+<%--                          <a href="${pageContext.request.contextPath}/article/modify.do?articleNo=${Article.articleNo}" class="glyphicon glyphicon-cog pull-right" style="padding:10px">수정</a> --%>
+<%--                          <a href="${pageContext.request.contextPath}/article/remove.do?articleNo=${Article.articleNo}" class="glyphicon glyphicon-trash pull-right" style="padding:10px">삭제</a> --%>
+<!--                     </div> -->
+<!--                     <br> -->
+
+<!--                     <p style="padding:20px"> -->
+<%--                         ${Article.contents} --%>
+<!--                     </p> -->
+
+<!-- 	            	<div style = "padding: 0px 0px 0px 990px;">   -->
+
+<%-- 					<span class="text-muted">${Article.date}</span> --%>
+<%-- <%--                          &nbsp;<span class="text-muted">조회 ${Article.viewcount}</span> --%>
+
+<!--             </div> -->
+
+<!--             <div class="text-center"> -->
+<%--                 <a href="<%=request.getHeader("Referer")%>"> --%>
+<!--                     <button type="button" class="btn btn-default">목록</button> -->
+<!--                 </a> -->
+<!--             </div> -->
+<!--             <p> -->
+<!--         </div> -->
+<!--     </div> -->
+<!--     </div> -->
+<!--     </div> -->
+
+            <form action="${pageContext.request.contextPath}/article/update.do?articleNo=${Article.articleNo}" method="POST">
+                <div class="panel panel-default">
+                	<input type="hidden" name="articleId" value="${Article.articleNo}">
+                    <div class="panel-heading">
+						<textarea class="form-control" name="title" rows="1">${Article.title}</textarea>                    </div>
+                    <div class="panel-body">
+                        <div class="post">
+                            <div class="write_info">
+                                <span class="name">${Article.userId}</span>
+                                <span class="date"><span class="_val">${Article.date}</span></span>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="contents" rows="5">${Article.contents}</textarea>
+                        </div>
+                    </div>
+	                </div>
 	
+	                <div class="text-center">
+	                    <button type="submit" class="btn btn-primary">저장</button>
+	                    <a href="<%=request.getHeader("Referer")%>" class="btn btn-default">취소</a>
+		            </div>
+	            </form>
 	        </div>
 	    </div>
-	</div>
-	</div>
-	</div>
+    </div>
+
 
 <div class="container margin_60">
 

@@ -34,12 +34,12 @@ public class ArticleStoreLogic implements ArticleStore{
 		try {
 			connection = connectionFactory.createConnection();
 			
-			psmt = connection.prepareStatement("INSERT INTO PROJECT_ARTICLE(article_title, article_date, article_contents, user_id) VALUES (?,?,?,?)");
+			psmt = connection.prepareStatement("INSERT INTO PROJECT_ARTICLE(article_title, article_contents, user_id) VALUES (?,?,?)");
 			
 			psmt.setString(1, article.getTitle());
-			psmt.setDate(2, article.getDate());
-			psmt.setString(3, article.getContents());
-			psmt.setString(4, article.getUserId());
+			//psmt.setDate(2, article.getDate());
+			psmt.setString(2, article.getContents());
+			psmt.setString(3, article.getUserId());
 
 			createdCount = psmt.executeUpdate();
 
@@ -55,12 +55,58 @@ public class ArticleStoreLogic implements ArticleStore{
 	@Override
 	public void delete(Integer articleNo) {
 		
+		String sql = "DELETE FROM PROJECT_ARTICLE WHERE article_no = ?";
+		
+		Connection conn=null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+				
+		try {
+			conn = connectionFactory.createConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, articleNo);
+			
+			pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtils.Close(conn, rs, pstmt); 
+		}		
+
 	}
 
 	@Override
+	public Article update(Article article, Integer articleNo) {
+		
+		String sql = "UPDATE PROJECT_ARTICLE SET article_title = ?, article_contents = ? WHERE article_no = ?";
+
+		Connection conn=null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+				
+		try {
+			conn = connectionFactory.createConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, article.getTitle());
+			pstmt.setString(2, article.getContents());
+			pstmt.setInt(3, articleNo);
+			
+			pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtils.Close(conn, rs, pstmt); 
+		}		
+		
+		return article;
+	}
+	
+	@Override
 	public Article read(Integer articleNo) {
 		
-		String sql = "SELECT article_no, article_title, article_date, article_contents, user_id FROM PROJECT_ARTICLE WHERE article_no = ?";
+		String sql = "SELECT article_no, article_title, article_date, article_contents, user_id, article_viewcount FROM PROJECT_ARTICLE WHERE article_no = ?";
 		
 		Connection conn=null;
 		PreparedStatement pstmt = null;
@@ -82,6 +128,7 @@ public class ArticleStoreLogic implements ArticleStore{
 				article.setDate(rs.getDate(3));
 				article.setContents(rs.getString(4));
 				article.setUserId(rs.getString(5));
+				article.setViewCount(rs.getInt(6));
 			}
 			
 		} catch (SQLException e) {
@@ -96,7 +143,7 @@ public class ArticleStoreLogic implements ArticleStore{
 	@Override
 	public List<Article> readAll() {
 
-		String sql = "SELECT article_no, article_title, article_date, user_id FROM PROJECT_ARTICLE";
+		String sql = "SELECT article_no, article_title, article_date, user_id, article_viewcount FROM PROJECT_ARTICLE";
 
 		Connection conn = null;
 		Statement statement = null;
@@ -113,6 +160,7 @@ public class ArticleStoreLogic implements ArticleStore{
 				article.setTitle(rs.getString(2));
 				article.setDate(rs.getDate(3));
 				article.setUserId(rs.getString(4));
+				article.setViewCount(rs.getInt(5));
 				list.add(article);
 			}
 		} catch (SQLException e) {
@@ -128,7 +176,7 @@ public class ArticleStoreLogic implements ArticleStore{
 	@Override
 	public List<Article> readMe(String userId) {
 		
-		String sql = "SELECT article_no, article_title, article_date, user_id FROM PROJECT_ARTICLE WHERE user_id = '"+userId+"'";
+		String sql = "SELECT article_no, article_title, article_date, user_id, article_viewcount FROM PROJECT_ARTICLE WHERE user_id = '"+userId+"'";
 
 		Connection conn = null;
 		Statement statement = null;
@@ -149,6 +197,8 @@ public class ArticleStoreLogic implements ArticleStore{
 				article.setTitle(rs.getString(2));
 				article.setDate(rs.getDate(3));
 				article.setUserId(rs.getString(4));
+				article.setViewCount(rs.getInt(5));
+
 				list.add(article);
 			}
 		} catch (SQLException e) {

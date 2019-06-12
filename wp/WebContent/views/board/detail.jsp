@@ -189,15 +189,22 @@
 <!--                 		</form> -->
 <!--                 	</div> -->
 <!--                 </div> -->
+
+	            	<div style = "padding: 0px 0px 0px 990px;">  
+
+					<span class="text-muted">${Article.date}</span>
+<%--                          &nbsp;<span class="text-muted">조회 ${Article.viewcount}</span> --%>
+
             </div>
 
             <div class="text-center">
-                <a href="<%=request.getHeader("Referer")%>">
+                <a href="${pageContext.request.contextPath}/article/list.do">
                     <button type="button" class="btn btn-default">목록</button>
                 </a>
             </div>
             <p>
         </div>
+    </div>
     </div>
     </div>
     </div>

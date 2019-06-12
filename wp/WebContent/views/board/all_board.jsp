@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="UTF-8">
@@ -196,6 +197,7 @@
 				                            	<fmt:formatDate value="${Article.date}" pattern="yyyy-MM-dd"/>
 				                            </td>
 				                            <td class="text-center">${Article.userId}</td>
+<%-- 				                            <td class="text-center">${Article.viewcount}</td> --%>
 				                            <td class="text-center">10</td>
 				                        </tr>
 			                        </c:forEach>

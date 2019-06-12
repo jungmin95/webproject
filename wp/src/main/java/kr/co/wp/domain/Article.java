@@ -9,6 +9,7 @@ public class Article {
 	private String userId;
 	private Date date;
 	private String contents;
+	private Integer viewcount;
 	
 	public Integer getArticleNo() {
 		return articleNo;
@@ -46,5 +47,10 @@ public class Article {
 //    public void setBoardType(Integer boardType) {
 //        this.boardType = boardType;
 //    }
-	
+    public Integer getViewCount() {
+        return viewcount;
+    }
+    public void setViewCount(Integer viewcount) {
+        this.viewcount = viewcount;
+    }
 }

@@ -66,7 +66,12 @@ public class ArticleController {
 	public String read(Integer articleNo, Model model) {
 		
 		Article article = service.read(articleNo);
-		//System.out.println(article); 
+		//System.out.println(article); 		
+//		Integer count = article.getViewCount();
+//		System.out.println(article.getViewCount());
+//		count++;
+//		article.setViewCount(count);
+		
 		model.addAttribute("Article", article);
 
 		User user =	userservice.find(article.getUserId());
@@ -74,4 +79,72 @@ public class ArticleController {
 		
 		return "board/detail";
 	}
+	
+	@RequestMapping(value ="myread.do", method= RequestMethod.GET)
+	public String myread(Integer articleNo, Model model) {
+		
+		Article article = service.read(articleNo);
+		
+		model.addAttribute("Article", article);
+
+		User user =	userservice.find(article.getUserId());
+		model.addAttribute("User", user);
+		
+		return "board/mydetail";
+	}
+	
+	@RequestMapping(value ="remove.do", method= RequestMethod.GET)
+	public String remove(Integer articleNo) {
+		
+		service.delete(articleNo);
+		
+		return "redirect:/article/list.do";
+	}
+	
+	@RequestMapping(value ="modify.do", method= RequestMethod.GET)
+	public String modify(Integer articleNo, Model model) {
+		
+		//System.out.println(articleNo);
+		Article article = service.read(articleNo);
+		
+		model.addAttribute("Article", article);
+		
+		return "board/modify";
+	}
+	
+	@RequestMapping(value ="update.do", method= {RequestMethod.POST,RequestMethod.GET})
+	public String update(Integer articleNo, @RequestParam("title") String title, @RequestParam("contents") String contents) {
+		
+		Article article = service.read(articleNo);
+		
+		//System.out.println(title);
+		article.setTitle(title);
+		article.setContents(contents);
+		
+		service.update(article, articleNo);
+		
+		return "redirect:/article/read.do?articleNo="+articleNo;
+	}
+	
+	@RequestMapping(value ="mymodify.do", method= RequestMethod.GET)
+	public String mymodify(Integer articleNo, Model model) {
+		
+		Article article = service.read(articleNo);
+		model.addAttribute("Article", article);
+		
+		return "board/mymodify";
+	}
+	
+	@RequestMapping(value ="myupdate.do", method= {RequestMethod.POST,RequestMethod.GET})
+	public String myupdate(Integer articleNo, @RequestParam("title") String title, @RequestParam("contents") String contents) {
+		
+		Article article = service.read(articleNo);
+		article.setTitle(title);
+		article.setContents(contents);
+		
+		service.update(article, articleNo);
+		
+		return "redirect:/article/myread.do?articleNo="+articleNo;
+	}
+	
 }

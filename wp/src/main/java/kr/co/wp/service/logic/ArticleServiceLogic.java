@@ -28,15 +28,17 @@ public class ArticleServiceLogic implements ArticleService {
 	}
 
 	@Override
-	public void update(Integer articleNo) {
+	public void delete(Integer articleNo) {
 		
+		store.delete(articleNo);
 	}
 
 	@Override
-	public void delete(Integer articleNo) {
+	public void update(Article article, Integer articleNo) {
 		
+		store.update(article, articleNo);
 	}
-
+	
 	@Override
 	public List<Article> readAll() {
 		
