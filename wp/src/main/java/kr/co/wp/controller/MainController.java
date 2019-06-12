@@ -29,25 +29,25 @@ public class MainController {
 			
 			user=service1.find((String)session.getAttribute("user_id"));
 			if(user.getType() == 1) {
-				List<Tourlist> list = service.findByActivity();
+				List<Tourlist> list = service.findByActivity_9();
 				ModelAndView modelAndView = new ModelAndView("main/main-page");
 				modelAndView.addObject("Tourlist", list);
 				return modelAndView;
 			}
 			else if(user.getType() == 2) {
-				List<Tourlist> list = service.findByYolo();
+				List<Tourlist> list = service.findByYolo_9();
 				ModelAndView modelAndView = new ModelAndView("main/main-page");
 				modelAndView.addObject("Tourlist", list);
 				return modelAndView;
 			}
 			else if(user.getType() == 3) {
-				List<Tourlist> list = service.findByHistory();
+				List<Tourlist> list = service.findByHistory_9();
 				ModelAndView modelAndView = new ModelAndView("main/main-page");
 				modelAndView.addObject("Tourlist", list);
 				return modelAndView;
 			}
 			else if(user.getType() == 4) {
-				List<Tourlist> list = service.findByHealing();
+				List<Tourlist> list = service.findByHealing_9();
 				ModelAndView modelAndView = new ModelAndView("main/main-page");
 				modelAndView.addObject("Tourlist", list);
 				return modelAndView;

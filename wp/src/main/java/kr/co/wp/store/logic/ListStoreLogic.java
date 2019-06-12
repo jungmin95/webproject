@@ -254,7 +254,7 @@ public class ListStoreLogic implements ListStore {
 
 	@Override
 	public List<Tourlist> Top10() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list LIMIT 10";
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list LIMIT 9";
 
 		Connection conn = null;
 		Statement statement = null;
