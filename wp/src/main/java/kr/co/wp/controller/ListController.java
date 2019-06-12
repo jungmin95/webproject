@@ -202,14 +202,50 @@ public class ListController {
 		return modelAndView;
 	}
 	
-	@RequestMapping("detail.do")
-	public ModelAndView DetailList(@RequestParam("list_num") int list_num) {
-		
-		
-		ModelAndView modelAndView = new ModelAndView("gallery/Detail");
-		modelAndView.addObject("list",service.find(list_num));
-		return modelAndView;
-	}
+	   @RequestMapping("detail.do")
+	   public ModelAndView DetailList(@RequestParam("list_num") int list_num) {
+	      ModelAndView modelAndView = new ModelAndView("gallery/Detail");
+	      modelAndView.addObject("list",service.findDetail(list_num));
+	      
+	      List<Tourlist> list = service.findAll();
+	      
+	      
+	      
+	      return modelAndView;
+	   }
+	   @RequestMapping(value="remove.do", method= RequestMethod.GET)
+	   public String remove(int list_num) {
+	      service.remove(list_num);
+	      
+	      return "redirect:/list/findAll.do";
+	      
+	   }
+	//   @RequestMapping(value="remove.do", method= RequestMethod.GET)
+	//   public ModelAndView remove(@RequestParam("list_num") int list_num, Model model, HttpServletRequest request) {
+//	      
+//	      System.out.println("name");
+//	      List<Tourlist> list = service.findAll();
+//	      model.addAttribute("Tourlist", list);
+//	      System.out.println("name");
+//	      ModelAndView modelAndView = new ModelAndView("gallery/Detail");
+//	      model.addAttribute("list",service.remove(list_num));
+//	      System.out.println("num");
+//	      
+//	      
+////	      return "redirect:/list/detail.do";
+//	      return modelAndView;
+	//   }
+	//   @RequestMapping(value ="remove.do", method= RequestMethod.POST)
+//	      public String remove(Model model ,@RequestParam("list_num") int list_num, @RequestParam("tour_areaname") String tour_areaname,@RequestParam("tourname") String tourname,@RequestParam("type") String type
+//	            ,@RequestParam("tourtype") String tourtype,@RequestParam("tourlocation") String tourlocation,@RequestParam("tourstory") String tourstory
+//	            ,@RequestParam("file") String file) {
+//	      
+//	      
+//	      
+//	         
+//	         return "gallery/Deatail";
+//	      }
+	   
 	
 	@RequestMapping(value ="create.do" ,method= RequestMethod.GET)
 	public String CreateList() {

@@ -8,6 +8,7 @@ public interface ListService {
 
 
 	Tourlist find(int list_num);
+	Tourlist findDetail(int list_num);
 	List<Tourlist> findByName(String list_name);
 	List<Tourlist> findAll();
 	List<Tourlist> findTop10();
@@ -28,4 +29,5 @@ public interface ListService {
 	List<Tourlist> findByHistory();
 	List<Tourlist> findByHealing();
 	boolean register(Tourlist list);
+	void remove(int list_num);
 }

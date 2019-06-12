@@ -20,6 +20,17 @@ public class ListServiceLogic implements ListService {
 
 		return store.read(list_num);
 	}
+	   @Override
+	   public Tourlist findDetail(int list_num) {
+	      System.out.println("222222222222222222222");
+	      return store.readDetail(list_num);
+	   }
+
+	   @Override
+	   public void remove(int list_num) {
+	      System.out.println("remove 1");
+	      store.delete(list_num);
+	   }
 
 	@Override
 	public List<Tourlist> findByName(String list_name) {

@@ -8,6 +8,7 @@ import kr.co.wp.domain.User;
 
 public interface ListStore {
 	Tourlist read(int list_num);
+	Tourlist readDetail(int list_num);
 	List<Tourlist> readByName(String list_name);
 	List<Tourlist> readAll();
 	List<Tourlist> Top10();
@@ -28,4 +29,6 @@ public interface ListStore {
 	List<Tourlist> readByHistory();
 	List<Tourlist> readByHealing();
 	boolean create(Tourlist list);
+	void delete(int list_num);
+
 }

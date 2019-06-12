@@ -58,7 +58,125 @@ public class ListStoreLogic implements ListStore {
 
 		return list;
 	}
+	 @Override
+	   public Tourlist readDetail(int list_num) {
+	      System.out.println("3333333333333333333333");
+	      
+	      String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_num = ?";
+	      Connection conn = null;
+	      PreparedStatement psmt = null;
+	      ResultSet rs = null;
+	      Tourlist list = null;
+	      try {
+	         System.out.println("444444444444444444444");
 
+	         conn = connectionFactory.createConnection();
+	         psmt = conn.prepareStatement(sql.toString());
+	         psmt.setInt(1, list_num);
+	         rs = psmt.executeQuery();
+	         if (rs.next()) {
+	            list = new Tourlist();
+	            list.setList_num(rs.getInt(1));
+	            list.setUserid(rs.getString(2));
+	            list.setTourimg(rs.getString(3));
+	            list.setTour_areaname(rs.getString(4));
+	            list.setTourname(rs.getString(5));
+	            list.setTourLocation(rs.getString(6));
+	            list.setTourstory(rs.getString(7));
+	            list.setTourtype(rs.getString(8));
+	            list.setTourRank(rs.getInt(9));
+	         }
+	      } catch (SQLException e) {
+	         throw new RuntimeException(e);
+	      } finally {
+	         JdbcUtils.Close(rs, psmt, conn);
+	      }
+
+	      return list;
+
+	   }
+
+	//   @Override
+	//   public boolean delete(Tourlist list) {
+//	      Connection connection = null;
+//	      PreparedStatement psmt = null;
+//	      int deleteCount = 0;
+//	      try {
+//	         connection = connectionFactory.createConnection();
+//	         psmt = connection.prepareStatement(
+//	               "DELETE FROM PROJECT_list WHERE list_num = ? AND user_id = ? AND list_img = ? AND areaname = ? AND list_name = ? AND arealocation = ? AND list_story = ? AND list_type = ? AND list_rank = ?");
+	//
+//	         psmt.setInt(1, list.getList_num());
+//	         psmt.setString(2, list.getUserid());
+//	         psmt.setString(3, list.getTourimg());
+//	         psmt.setString(4, list.getTour_areaname());
+//	         psmt.setString(5, list.getTourname());
+//	         psmt.setString(6, list.getTourLocation());
+//	         psmt.setString(7, list.getTourstory());
+//	         psmt.setString(8, list.getTourtype());
+//	         psmt.setInt(9, list.getTourRank());
+	//
+//	         deleteCount = psmt.executeUpdate();
+	//
+//	      } catch (SQLException e) {
+//	         throw new RuntimeException(e);
+//	      } finally {
+//	         JdbcUtils.Close(psmt, connection);
+//	      }
+	//
+//	      return deleteCount > 0;
+	//
+	//   }
+	//   @Override
+	//   public boolean delete(int list_num) {
+//	      Connection connection = null;
+//	      PreparedStatement psmt = null;
+//	      Tourlist list = null;
+//	      int deleteCount = 0;
+//	      try {
+//	         connection = connectionFactory.createConnection();
+//	         psmt = connection.prepareStatement(
+//	               "DELETE FROM PROJUCT_list WHERE list_num = ?");
+//	         
+//	         psmt.setInt(1, list_num);
+	//
+//	         deleteCount = psmt.executeUpdate();
+	//
+//	      } catch (SQLException e) {
+//	         throw new RuntimeException(e);
+//	      } finally {
+//	         JdbcUtils.Close(psmt, connection);
+//	      }
+	//
+//	      return deleteCount > 0;
+	//   }
+	   @Override
+	   public void delete(int list_num) {
+	      Connection connection = null;
+	      PreparedStatement psmt = null;
+	      ResultSet rs = null;
+	      Tourlist list = null;
+	      int deleteCount = 0;
+	      try {
+	         connection = connectionFactory.createConnection();
+	         psmt = connection.prepareStatement(
+	               "DELETE FROM PROJECT_list WHERE list_num = ?");
+	         
+	         psmt.setInt(1, list_num);
+
+	         deleteCount = psmt.executeUpdate();
+
+	      } catch (SQLException e) {
+	         e.printStackTrace();
+	      } finally {
+	         JdbcUtils.Close(psmt, connection, rs);
+	      }
+
+	      
+	   }   
+	   
+	      
+	   
 	@Override
 	public List<Tourlist> readByName(String list_name) {
 		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_name LIKE ?";
