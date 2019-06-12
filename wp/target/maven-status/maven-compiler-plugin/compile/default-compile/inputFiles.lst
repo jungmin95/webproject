@@ -1,3 +1,4 @@
+C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\controller\ArticleController.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\controller\UserController.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\store\logic\MemberStoreLogic.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\controller\MainController.java
@@ -9,7 +10,12 @@ C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\service\MemberService.jav
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\store\MemberStore.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\service\ListService.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\store\factory\ConnectionFactory.java
+C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\domain\Article.java
+C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\store\logic\ArticleStoreLogic.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\controller\ListController.java
+C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\service\logic\ArticleServiceLogic.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\domain\Tourlist.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\domain\User.java
+C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\store\ArticleStore.java
 C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\store\ListStore.java
+C:\Users\YOUR\git\webproject\wp\src\main\java\kr\co\wp\service\ArticleService.java

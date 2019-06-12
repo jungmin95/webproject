@@ -2,9 +2,10 @@ package kr.co.wp.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -217,13 +218,22 @@ public class ListController {
 	}
 	
 	@RequestMapping(value ="create.do" , method= RequestMethod.POST)
-	public String CreateList(Model model ,@RequestParam("tour_areaname") String tour_areaname,@RequestParam("tourname") String tourname,@RequestParam("type") String type
-			,@RequestParam("tourtype") String tourtype,@RequestParam("tourlocation") String tourlocation,@RequestParam("tourstory") String tourstory
-			,@RequestParam("file") String file) {
+	public String CreateList(HttpSession session,Tourlist list,@RequestParam("areaname") String areaname,@RequestParam("tourname") String tourname
+			,@RequestParam("tourtype") String tourtype,@RequestParam("arealocation") String arealocation,@RequestParam("tourstory") String tourstory
+			,@RequestParam("tourimg") String tourimg) {
 		
-		
-		
-		return "redirect:/gallery/list";
+		list.setUserid((String)session.getAttribute("user_id"));
+		list.setTour_areaname(areaname);
+		list.setTourLocation(arealocation);
+		list.setTourtype(tourtype);
+		list.setTourname(tourname);
+		list.setTourstory(tourstory);
+		list.setTourimg(tourimg);
+
+		service.register(list);
+	
+	
+	return "redirect:/main/index.do";
 	}
 
 

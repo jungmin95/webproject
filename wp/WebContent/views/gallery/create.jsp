@@ -282,7 +282,8 @@ table thead th {
 
 	<div class="content-wrap">
 		<div class="descrip">
-			<form id="create_list" action="${pageContext.request.contextPath}/list/crate.do" method="post" enctype="multipart/form-data">
+			<form id="create_list" action="${pageContext.request.contextPath}/list/create.do" method="post" enctype="multipart/form-data">
+			<input type ="hidden" name="userId" value = "${Tourlist.userId }">
 				<table>
 					<tbody>
 						<tr>
@@ -293,17 +294,17 @@ table thead th {
 										<tr>
 											<td
 												style="border-color: #ddd; background-color: #eee; border-top-color: #414a60; border-top-width: 2px; width: 150px; text-align: center;">
-												<span style="color: #000000; font-size: 12px;">지역명</span>
+												<span style="color: #000000; font-size: 12px;">지역</span>
 											</td>
 											<td
 												style="border-color: #ddd; border-top-color: #414a60; border-top-width: 2px;">
-												<input title="input" type="text" name="tour_areaname"
+												<input title="input" type="text" name="areaname"
 												maxlength="100"
 												style="width: 100%; height: 26px; border: none;">
 											</td>
 											<td
 												style="border-color: #ddd; background-color: #eee; border-top-color: #414a60; border-top-width: 2px; width: 150px; text-align: center;">
-												<span style="color: #000000; font-size: 12px;">도시</span>
+												<span style="color: #000000; font-size: 12px;">장소이름</span>
 											</td>
 											<td
 												style="border-color: #ddd; border-top-color: #414a60; border-top-width: 2px;">
@@ -317,27 +318,33 @@ table thead th {
 												style="border-color: #ddd; background-color: #eee; text-align: center;">
 												<span style="color: #000000; font-size: 12px;">테마</span>
 											</td>
-											<td style="border-color: #ddd;"><select
-												style="width: 60%; margin-left: 10px;">
-													<option name="tourtype" selected>------테마 선택------</option>
-													<option>-액티비티형</option>
-													<option>-욜로형</option>
-													<option>-역사탐방형</option>
-													<option>-힐링형</option>
-													<option>-기타</option>
-											</select></td>
-							
-										</tr>
-										<tr style="height: 300px;">
 											<td
-												style="border-color: #ddd; background-color: #eee; text-align: center;">
-												<span style="color: #000000; font-size: 12px;">여행지 위치</span>
+												style="border-color: #ddd; border-top-color: #414a60; border-top-width: 2px;">
+												<input title="input" type="text" name="tourtype"
+												maxlength="100"  placeholder="액티비티형, 욜로형, 역사탐방형, 힐링형, 기타"
+												style="width: 100%; height: 26px; border: none;">
 											</td>
-											<td colspan=3 style="border-color: #ddd;"><textarea
-													name="tourlocation" rows="10" cols="100"
-													style="height: 380px; width: 100%; border: none;"></textarea>
+<!-- 											<td style="border-color: #ddd;"><select -->
+<!-- 												style="width: 60%; margin-left: 10px;"> -->
+<!-- 													<option name="tourtype" selected>------테마 선택------</option> -->
+<!-- 													<option>-액티비티형</option> -->
+<!-- 													<option>-욜로형</option> -->
+<!-- 													<option>-역사탐방형</option> -->
+<!-- 													<option>-힐링형</option> -->
+<!-- 													<option>-기타</option> -->
+<!-- 											</select></td> -->
+											<td
+												style="border-color: #ddd; background-color: #eee; border-top-color: #414a60; border-top-width: 2px; width: 150px; text-align: center;">
+												<span style="color: #000000; font-size: 12px;">주소</span>
+											</td>
+											<td
+												style="border-color: #ddd; border-top-color: #414a60; border-top-width: 2px;">
+												<input title="input" type="text" name="arealocation"
+												maxlength="100"
+												style="width: 100%; height: 26px; border: none;">
 											</td>
 										</tr>
+										
 										<tr style="height: 400px;">
 											<td
 												style="border-color: #ddd; background-color: #eee; text-align: center;">
@@ -354,14 +361,14 @@ table thead th {
 											</td>
 											<td colspan=3
 												style="border-color: #ddd; border-bottom-color: #414a60; border-bottom-width: 2px;">
-												<input name="file" type="file" style="width: 100%; height: 26px;" />
+												<input name="tourimg" type="text" style="width: 100%; height: 26px;" />
 											</td>
 										</tr>
 									</tbody>
 								</table> <input type="hidden" name="board_code" value="news" />
 
 								<div class="marg-t-15 text-right">
-									<input type="button" class="btn" value="확인" id="save" /> 
+									<input type="submit" class="btn" value="확인" id="save" /> 
 									<input type="button" class="btn" value="취소" onclick="javascript:history.back(-1);" />
 
 								</div>
