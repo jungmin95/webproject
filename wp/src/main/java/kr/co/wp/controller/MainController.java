@@ -57,6 +57,7 @@ public class MainController {
 				return modelAndView;
 			}
 		}
+		
 		// 1 -> 액티비티
 		// 2 -> 욜로
 		// 3 -> 역사
