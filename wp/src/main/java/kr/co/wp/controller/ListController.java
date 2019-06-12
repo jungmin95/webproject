@@ -190,6 +190,48 @@ public class ListController {
 		return modelAndView;
 	}
 	
+	@RequestMapping("findByActivity_9.do")
+	public ModelAndView findAllList_Activity_9() {
+		List<Tourlist> list = service.findByActivity_9();
+		
+		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		modelAndView.addObject("Tourlist", list);
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping("findByYolo_9.do")
+	public ModelAndView findAllList_Yolo_9() {
+		List<Tourlist> list = service.findByYolo_9();
+		
+		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		modelAndView.addObject("Tourlist", list);
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping("findByHistory_9.do")
+	public ModelAndView findAllList_History_9() {
+		List<Tourlist> list = service.findByHistory_9();
+		
+		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		modelAndView.addObject("Tourlist", list);
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping("findByHealing_9.do")
+	public ModelAndView findAllList_Healing_9() {
+		List<Tourlist> list = service.findByHealing_9();
+		
+		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		modelAndView.addObject("Tourlist", list);
+		
+		return modelAndView;
+	}
+	
+	
+	
 	@RequestMapping("findByName.do")
 	public ModelAndView searchByName(@RequestParam("list_name") String list_name) {
 		

@@ -898,5 +898,153 @@ public class ListStoreLogic implements ListStore {
 
 		return lists;
 	}
+
+	@Override
+	public List<Tourlist> readByActivity_9() {
+	     String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'A' LIMIT 9";
+
+	      Connection conn = null;
+	      Statement statement = null;
+	      ResultSet rs = null;
+	      List<Tourlist> lists = new ArrayList<Tourlist>();
+
+	      try {
+	         conn = connectionFactory.createConnection();
+	         statement = conn.createStatement();
+	         rs = statement.executeQuery(sql);
+	         while (rs.next()) {
+	            Tourlist list = new Tourlist();
+	            list = new Tourlist();
+	            list.setList_num(rs.getInt(1));
+	            list.setUserid(rs.getString(2));
+	            list.setTourimg(rs.getString(3));
+	            list.setTour_areaname(rs.getString(4));
+	            list.setTourname(rs.getString(5));
+	            list.setTourLocation(rs.getString(6));
+	            list.setTourstory(rs.getString(7));
+	            list.setTourtype(rs.getString(8));
+	            list.setTourRank(rs.getInt(9));
+	            lists.add(list);
+	         }
+	      } catch (SQLException e) {
+	         throw new RuntimeException(e);
+	      } finally {
+	         JdbcUtils.Close(rs, statement, conn);
+	      }
+
+	      return lists;
+
+	}
+
+	@Override
+	public List<Tourlist> readByYolo_9() {
+		  String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'B' LIMIT 9";
+
+	      Connection conn = null;
+	      Statement statement = null;
+	      ResultSet rs = null;
+	      List<Tourlist> lists = new ArrayList<Tourlist>();
+
+	      try {
+	         conn = connectionFactory.createConnection();
+	         statement = conn.createStatement();
+	         rs = statement.executeQuery(sql);
+	         while (rs.next()) {
+	            Tourlist list = new Tourlist();
+	            list = new Tourlist();
+	            list.setList_num(rs.getInt(1));
+	            list.setUserid(rs.getString(2));
+	            list.setTourimg(rs.getString(3));
+	            list.setTour_areaname(rs.getString(4));
+	            list.setTourname(rs.getString(5));
+	            list.setTourLocation(rs.getString(6));
+	            list.setTourstory(rs.getString(7));
+	            list.setTourtype(rs.getString(8));
+	            list.setTourRank(rs.getInt(9));
+	            lists.add(list);
+	         }
+	      } catch (SQLException e) {
+	         throw new RuntimeException(e);
+	      } finally {
+	         JdbcUtils.Close(rs, statement, conn);
+	      }
+
+	      return lists;
+
+	}
+
+	@Override
+	public List<Tourlist> readByHistory_9() {
+		   String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'C' LIMIT 9";
+
+		      Connection conn = null;
+		      Statement statement = null;
+		      ResultSet rs = null;
+		      List<Tourlist> lists = new ArrayList<Tourlist>();
+
+		      try {
+		         conn = connectionFactory.createConnection();
+		         statement = conn.createStatement();
+		         rs = statement.executeQuery(sql);
+		         while (rs.next()) {
+		            Tourlist list = new Tourlist();
+		            list = new Tourlist();
+		            list.setList_num(rs.getInt(1));
+		            list.setUserid(rs.getString(2));
+		            list.setTourimg(rs.getString(3));
+		            list.setTour_areaname(rs.getString(4));
+		            list.setTourname(rs.getString(5));
+		            list.setTourLocation(rs.getString(6));
+		            list.setTourstory(rs.getString(7));
+		            list.setTourtype(rs.getString(8));
+		            list.setTourRank(rs.getInt(9));
+		            lists.add(list);
+		         }
+		      } catch (SQLException e) {
+		         throw new RuntimeException(e);
+		      } finally {
+		         JdbcUtils.Close(rs, statement, conn);
+		      }
+
+		      return lists;
+
+	}
+
+	@Override
+	public List<Tourlist> readByHealing_9() {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'D' LIMIT 9";
+
+	      Connection conn = null;
+	      Statement statement = null;
+	      ResultSet rs = null;
+	      List<Tourlist> lists = new ArrayList<Tourlist>();
+
+	      try {
+	         conn = connectionFactory.createConnection();
+	         statement = conn.createStatement();
+	         rs = statement.executeQuery(sql);
+	         while (rs.next()) {
+	            Tourlist list = new Tourlist();
+	            list = new Tourlist();
+	            list.setList_num(rs.getInt(1));
+	            list.setUserid(rs.getString(2));
+	            list.setTourimg(rs.getString(3));
+	            list.setTour_areaname(rs.getString(4));
+	            list.setTourname(rs.getString(5));
+	            list.setTourLocation(rs.getString(6));
+	            list.setTourstory(rs.getString(7));
+	            list.setTourtype(rs.getString(8));
+	            list.setTourRank(rs.getInt(9));
+	            lists.add(list);
+	         }
+	      } catch (SQLException e) {
+	         throw new RuntimeException(e);
+	      } finally {
+	         JdbcUtils.Close(rs, statement, conn);
+	      }
+
+	      return lists;
+
+	}
 	
 }

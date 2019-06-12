@@ -151,4 +151,24 @@ public class ListServiceLogic implements ListService {
 
 		return store.readByHealing();
 	}
+	@Override
+	public List<Tourlist> findByActivity_9() {
+		
+		return store.readByActivity_9();
+	}
+	@Override
+	public List<Tourlist> findByYolo_9() {
+		
+		return store.readByYolo_9();
+	}
+	@Override
+	public List<Tourlist> findByHistory_9() {
+		
+		return store.readByHistory_9();
+	}
+	@Override
+	public List<Tourlist> findByHealing_9() {
+		
+		return store.readByHealing_9();
+	}
 }

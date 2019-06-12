@@ -28,6 +28,11 @@ public interface ListStore {
 	List<Tourlist> readByYolo();
 	List<Tourlist> readByHistory();
 	List<Tourlist> readByHealing();
+	
+	List<Tourlist> readByActivity_9();
+	List<Tourlist> readByYolo_9();
+	List<Tourlist> readByHistory_9();
+	List<Tourlist> readByHealing_9();
 	boolean create(Tourlist list);
 	void delete(int list_num);
 

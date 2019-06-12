@@ -28,6 +28,11 @@ public interface ListService {
 	List<Tourlist> findByYolo();
 	List<Tourlist> findByHistory();
 	List<Tourlist> findByHealing();
+	
+	List<Tourlist> findByActivity_9();
+	List<Tourlist> findByYolo_9();
+	List<Tourlist> findByHistory_9();
+	List<Tourlist> findByHealing_9();
 	boolean register(Tourlist list);
 	void remove(int list_num);
 }
