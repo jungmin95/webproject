@@ -194,28 +194,28 @@
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/leisure.jpg" alt="Pic" class="img-responsive">
+                                            <a href="${pageContext.request.contextPath}/list/findByActivity.do"><img src="/resources/img/leisure.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>액티비티형</span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/foodlist.jpg" alt="Pic" class="img-responsive">
+                                            <a href="${pageContext.request.contextPath}/list/findByYolo.do"><img src="/resources/img/foodlist.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>욜로형</span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/history1.jpg" alt="Pic" class="img-responsive">
+                                            <a href="${pageContext.request.contextPath}/list/findByHistory.do"><img src="/resources/img/history1.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>역사탐밤형 </span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/대나무.jpg" alt="Pic" class="img-responsive">
+                                            <a href="${pageContext.request.contextPath}/list/findByHealing.do"><img src="/resources/img/대나무.jpg" alt="Pic" class="img-responsive">
                                             </a>
                                         </p>
                                         <h4><span>힐링형</span></h4>
