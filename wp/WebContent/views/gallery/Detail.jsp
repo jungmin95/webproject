@@ -264,44 +264,39 @@
 	<%@ include file="../gallery/DetailComment.jsp"%>
 
 
-	<div class="container margin_60">
+<div class="container margin_60">
 
-		<div class="main_title">
-			<h2>고객의소리</h2>
-		</div>
-
-		<div class="row">
-
-			<div class="col-md-4 wow zoomIn" data-wow-delay="0.2s">
-				<div class="feature_home">
-					<i class="icon_set_1_icon-41"></i>
-					<h3>
-						<span>지역위치문의</span>
-					</h3>
-					<a href="about.html" class="btn_1 outline">문의하러가기</a>
-				</div>
+			<div class="main_title">
+				<h2>협력 업체</h2>
 			</div>
 
-			<div class="col-md-4 wow zoomIn" data-wow-delay="0.6s">
-				<div class="feature_home">
-					<i class="icon_set_1_icon-57"></i>
-					<h3>
-						<span>고객문의</span>
-					</h3>
-					<a href="about.html" class="btn_1 outline">문의하러가기</a>
-				</div>
-			</div>
+			<div class="row">
 
-			<div class="col-md-4 wow zoomIn" data-wow-delay="0.4s">
-				<div class="feature_home">
-					<i class="icon_set_1_icon-68"></i>
-					<h3>
-						<span>개인정보처리방침</span>
-					</h3>
-					<a href="about.html" class="btn_1 outline">문의하러가기</a>
+				<div class="col-md-4 wow zoomIn" data-wow-delay="0.2s">
+					<div class="feature_home">
+						<i class="icon_set_1_icon-6"></i>
+						<h3><span>호텔스컴바인</span></h3>
+						<a href="https://www.hotelscombined.co.kr/" class="btn_1 outline">들어가기</a>
+						
+					</div>
 				</div>
+
+				<div class="col-md-4 wow zoomIn" data-wow-delay="0.6s">
+					<div class="feature_home">
+						<i class="icon_set_1_icon-25"></i>
+						<h3><span>코레일</span></h3>
+						<a href="http://info.korail.com/mbs/www/index.jsp" class="btn_1 outline">들어가기</a>
+					</div>
+				</div>
+
+                <div class="col-md-4 wow zoomIn" data-wow-delay="0.4s">
+                    <div class="feature_home">
+                        <i class="icon_set_1_icon-90"></i>
+                        <h3><span>국내여행KAYAK</span></h3>
+                        <a href="https://www.kayak.co.kr/?ispredir=true" class="btn_1 outline">들어가기</a>
+                    </div>
+                </div>
 			</div>
-		</div>
 		<!--End row -->
 
 		<hr>
