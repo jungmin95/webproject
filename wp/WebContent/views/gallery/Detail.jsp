@@ -262,7 +262,7 @@
 	</div>
 
 	<%@ include file="../gallery/DetailComment.jsp"%>
-	<%@ include file="../common/footer.jsp"%>
+
 
 	<div class="container margin_60">
 
@@ -373,3 +373,5 @@
 
 </body>
 </html>
+<%@ include file="../common/footer.jsp"%>
+--%>
