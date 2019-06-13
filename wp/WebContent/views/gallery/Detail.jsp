@@ -249,7 +249,7 @@
 									<button type="button" class="btn btn btn-warning">삭제</button>
 								</a> &nbsp; <a href="<%=request.getHeader("Referer")%>">
 									<button type="button" class="btn btn btn-warning">목록</button>
-								</a>K
+								</a>
 
 							</div>
 
