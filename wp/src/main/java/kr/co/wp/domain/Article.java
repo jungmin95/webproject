@@ -41,12 +41,7 @@ public class Article {
     public void setContents(String contents) {
         this.contents = contents;
     }
-//    public Integer getBoardType() {
-//        return boardType;
-//    }
-//    public void setBoardType(Integer boardType) {
-//        this.boardType = boardType;
-//    }
+
     public Integer getViewCount() {
         return viewcount;
     }

@@ -186,8 +186,6 @@ public class ArticleStoreLogic implements ArticleStore{
 		
 		try {
 			conn = connectionFactory.createConnection();
-//			pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, userId);
 			statement = conn.createStatement();
 			rs = statement.executeQuery(sql);
 			

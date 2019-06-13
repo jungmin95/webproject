@@ -17,16 +17,7 @@ public class MemberServiceLogic implements MemberService{
 
 	@Override
 	public User login(User user) {
-		//
-//		User readedUser = null;
-//		if (validate(user)) {
-//			readedUser = store.login(user.getId());
-////		}
-//		readedUser = store.login(user.getId());
-//		if(user == readedUser) {
-//			return readedUser;
-//		}
-//		
+			
 		return store.login(user.getId());
 	}
 	
