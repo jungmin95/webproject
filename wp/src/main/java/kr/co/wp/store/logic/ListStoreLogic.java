@@ -96,60 +96,6 @@ public class ListStoreLogic implements ListStore {
 
 	   }
 
-	//   @Override
-	//   public boolean delete(Tourlist list) {
-//	      Connection connection = null;
-//	      PreparedStatement psmt = null;
-//	      int deleteCount = 0;
-//	      try {
-//	         connection = connectionFactory.createConnection();
-//	         psmt = connection.prepareStatement(
-//	               "DELETE FROM PROJECT_list WHERE list_num = ? AND user_id = ? AND list_img = ? AND areaname = ? AND list_name = ? AND arealocation = ? AND list_story = ? AND list_type = ? AND list_rank = ?");
-	//
-//	         psmt.setInt(1, list.getList_num());
-//	         psmt.setString(2, list.getUserid());
-//	         psmt.setString(3, list.getTourimg());
-//	         psmt.setString(4, list.getTour_areaname());
-//	         psmt.setString(5, list.getTourname());
-//	         psmt.setString(6, list.getTourLocation());
-//	         psmt.setString(7, list.getTourstory());
-//	         psmt.setString(8, list.getTourtype());
-//	         psmt.setInt(9, list.getTourRank());
-	//
-//	         deleteCount = psmt.executeUpdate();
-	//
-//	      } catch (SQLException e) {
-//	         throw new RuntimeException(e);
-//	      } finally {
-//	         JdbcUtils.Close(psmt, connection);
-//	      }
-	//
-//	      return deleteCount > 0;
-	//
-	//   }
-	//   @Override
-	//   public boolean delete(int list_num) {
-//	      Connection connection = null;
-//	      PreparedStatement psmt = null;
-//	      Tourlist list = null;
-//	      int deleteCount = 0;
-//	      try {
-//	         connection = connectionFactory.createConnection();
-//	         psmt = connection.prepareStatement(
-//	               "DELETE FROM PROJUCT_list WHERE list_num = ?");
-//	         
-//	         psmt.setInt(1, list_num);
-	//
-//	         deleteCount = psmt.executeUpdate();
-	//
-//	      } catch (SQLException e) {
-//	         throw new RuntimeException(e);
-//	      } finally {
-//	         JdbcUtils.Close(psmt, connection);
-//	      }
-	//
-//	      return deleteCount > 0;
-	//   }
 	   @Override
 	   public void delete(int list_num) {
 	      Connection connection = null;
@@ -175,8 +121,7 @@ public class ListStoreLogic implements ListStore {
 	      
 	   }   
 	   
-	      
-	   
+	      	   
 	@Override
 	public List<Tourlist> readByName(String list_name) {
 		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_name LIKE ?";
@@ -254,7 +199,7 @@ public class ListStoreLogic implements ListStore {
 
 	@Override
 	public List<Tourlist> Top10() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list LIMIT 9";
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list LIMIT 12, 9";
 
 		Connection conn = null;
 		Statement statement = null;
