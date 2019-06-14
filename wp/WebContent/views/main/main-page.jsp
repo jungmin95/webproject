@@ -32,6 +32,14 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 
+<style>
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+	display: block;
+	max-width: 100%;
+	height: 300px;
+}
+
+</style>
 </head>
 
 <body>
@@ -174,27 +182,27 @@
 			<c:choose>
 			<c:when test = "${type == 1}">
                   <p class="text-center add_bottom_30">
-            <a href="${pageContext.request.contextPath}/list/findByActivity.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+            <a href="${pageContext.request.contextPath}/list/findByActivity.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 </a>
          </p>
         	 </c:when>
         	 <c:when test = "${type == 2}">
                   <p class="text-center add_bottom_30">
-            <a href="${pageContext.request.contextPath}/list/findByYolo.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+            <a href="${pageContext.request.contextPath}/list/findByYolo.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기</a>
          </p>
         	 </c:when>
         	 <c:when test = "${type == 3}">
                   <p class="text-center add_bottom_30">
-            <a href="${pageContext.request.contextPath}/list/findByHistory.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+            <a href="${pageContext.request.contextPath}/list/findByHistory.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기</a>
          </p>
         	 </c:when>
         	 <c:when test = "${type == 4}">
                   <p class="text-center add_bottom_30">
-            <a href="${pageContext.request.contextPath}/list/findByHealing.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+            <a href="${pageContext.request.contextPath}/list/findByHealing.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기</a>
          </p>
         	 </c:when>
         	 <c:otherwise>
         	  <p class="text-center add_bottom_30">
-            <a href="${pageContext.request.contextPath}/list/findAll.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기 (10) </a>
+            <a href="${pageContext.request.contextPath}/list/findAll.do" class="btn_1 medium"><i class="icon-eye-7"></i>전체보기</a>
          </p>
         	 </c:otherwise>
           </c:choose>
@@ -221,28 +229,40 @@
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="${pageContext.request.contextPath}/list/findByActivity.do"><img src="/resources/img/leisure.jpg" alt="Pic" class="img-responsive">
+                                            <a href="${pageContext.request.contextPath}/list/findByActivity.do"><img src="/resources/img/leisure.jpg" alt="Pic" class="img-responsive" style="
+    max-width: 100%;
+    height: auto;
+">
                                             </a>
                                         </p>
                                         <h4><span>액티비티형</span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="${pageContext.request.contextPath}/list/findByYolo.do"><img src="/resources/img/foodlist.jpg" alt="Pic" class="img-responsive">
+                                            <a href="${pageContext.request.contextPath}/list/findByYolo.do"><img src="/resources/img/foodlist.jpg" alt="Pic" class="img-responsive" style="
+    max-width: 100%;
+    height: auto;
+">
                                             </a>
                                         </p>
                                         <h4><span>욜로형</span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="${pageContext.request.contextPath}/list/findByHistory.do"><img src="/resources/img/history1.jpg" alt="Pic" class="img-responsive">
+                                            <a href="${pageContext.request.contextPath}/list/findByHistory.do"><img src="/resources/img/history1.jpg" alt="Pic" class="img-responsive" style="
+    max-width: 100%;
+    height: auto;
+">
                                             </a>
                                         </p>
                                         <h4><span>역사탐밤형 </span></h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="${pageContext.request.contextPath}/list/findByHealing.do"><img src="/resources/img/대나무.jpg" alt="Pic" class="img-responsive">
+                                            <a href="${pageContext.request.contextPath}/list/findByHealing.do"><img src="/resources/img/대나무.jpg" alt="Pic" class="img-responsive" style="
+    max-width: 100%;
+    height: auto;
+">
                                             </a>
                                         </p>
                                         <h4><span>힐링형</span></h4>
@@ -256,28 +276,40 @@
 
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/1020.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/1020.jpg" alt="Pic" class="img-responsive" style="
+    max-width: 100%;
+    height: auto;
+">
                                             </a>
                                         </p>
                                         <h4><span>10 ~ 20</span> 대</h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/2030.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/2030.jpg" alt="Pic" class="img-responsive" style="
+    max-width: 100%;
+    height: auto;
+">
                                             </a>
                                         </p>
                                         <h4><span>20 ~ 30</span> 대</h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/3040.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/3040.jpg" alt="Pic" class="img-responsive" style="
+    max-width: 100%;
+    height: auto;
+">
                                             </a>
                                         </p>
                                         <h4><span>30 ~ 40 </span> 대</h4>
                                     </div>
                                     <div class="col-md-3 col-sm-6 text-center">
                                         <p>
-                                            <a href="showall.html"><img src="/resources/img/4050.jpg" alt="Pic" class="img-responsive">
+                                            <a href="showall.html"><img src="/resources/img/4050.jpg" alt="Pic" class="img-responsive" style="
+    max-width: 100%;
+    height: auto;
+">
                                             </a>
                                         </p>
                                         <h4><span>40 ~ 50 </span> 대</h4>
