@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.co.wp.domain.Tourlist;
+import kr.co.wp.page.Criteria;
+import kr.co.wp.page.PageMaker;
 import kr.co.wp.service.ListService;
 
 
@@ -33,158 +35,225 @@ public class ListController {
 	}
 	
 	@RequestMapping("findbySeoul.do")
-	public ModelAndView findAllList_Seoul() {
-		List<Tourlist> list = service.findBySeoul();
-		
+	public ModelAndView findAllList_Seoul(Criteria cri) {
+		List<Tourlist> list = service.findBySeoul(cri);
+
+
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
+		
 		modelAndView.addObject("Tourlist", list);
+		
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyGyeonggi.do")
-	public ModelAndView findAllList_Gyeonggi() {
-		List<Tourlist> list = service.findByGyeonggi();
+	public ModelAndView findAllList_Gyeonggi(Criteria cri) {
+		List<Tourlist> list = service.findByGyeonggi(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyIncheon.do")
-	public ModelAndView findAllList_Incheon() {
-		List<Tourlist> list = service.findByIncheon();
+	public ModelAndView findAllList_Incheon(Criteria cri) {
+		List<Tourlist> list = service.findByIncheon(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyGangwon.do")
-	public ModelAndView findAllList_Gangwon() {
-		List<Tourlist> list = service.findByGangwon();
+	public ModelAndView findAllList_Gangwon(Criteria cri) {
+		List<Tourlist> list = service.findByGangwon(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyChungbuk.do")
-	public ModelAndView findAllList_Chungbuk() {
-		List<Tourlist> list = service.findByChungbuk();
+	public ModelAndView findAllList_Chungbuk(Criteria cri) {
+		List<Tourlist> list = service.findByChungbuk(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyChungnam.do")
-	public ModelAndView findAllList_Chungnam() {
-		List<Tourlist> list = service.findByChungnam();
+	public ModelAndView findAllList_Chungnam(Criteria cri) {
+		List<Tourlist> list = service.findByChungnam(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyBusan.do")
-	public ModelAndView findAllList_Busan() {
-		List<Tourlist> list = service.findByBusan();
+	public ModelAndView findAllList_Busan(Criteria cri) {
+		List<Tourlist> list = service.findByBusan(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	@RequestMapping("findbyGyeongbuk.do")
-	public ModelAndView findAllList_Gyeongbuk() {
-		List<Tourlist> list = service.findByGyeongbuk();
+	public ModelAndView findAllList_Gyeongbuk(Criteria cri) {
+		List<Tourlist> list = service.findByGyeongbuk(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyGyeongnam.do")
-	public ModelAndView findAllList_Gyeongnam() {
-		List<Tourlist> list = service.findByGyeongnam();
+	public ModelAndView findAllList_Gyeongnam(Criteria cri) {
+		List<Tourlist> list = service.findByGyeongnam(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyJeonbuk.do")
-	public ModelAndView findAllList_Jeonbuk() {
-		List<Tourlist> list = service.findByJeonbuk();
+	public ModelAndView findAllList_Jeonbuk(Criteria cri) {
+		List<Tourlist> list = service.findByJeonbuk(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyJeonnam.do")
-	public ModelAndView findAllList_Jeonnam() {
-		List<Tourlist> list = service.findByJeonnam();
+	public ModelAndView findAllList_Jeonnam(Criteria cri) {
+		List<Tourlist> list = service.findByJeonnam(cri);
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findbyJeju.do")
-	public ModelAndView findAllList_Jeju() {
-		List<Tourlist> list = service.findByJeju();
+	public ModelAndView findAllList_Jeju(Criteria cri) {
+		List<Tourlist> list = service.findByJeju(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findByActivity.do")
-	public ModelAndView findAllList_Activity() {
-		List<Tourlist> list = service.findByActivity();
+	public ModelAndView findAllList_Activity(Criteria cri) {
+		List<Tourlist> list = service.findByActivity(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findByYolo.do")
-	public ModelAndView findAllList_Yolo() {
-		List<Tourlist> list = service.findByYolo();
+	public ModelAndView findAllList_Yolo(Criteria cri) {
+		List<Tourlist> list = service.findByYolo(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findByHistory.do")
-	public ModelAndView findAllList_History() {
-		List<Tourlist> list = service.findByHistory();
+	public ModelAndView findAllList_History(Criteria cri) {
+		List<Tourlist> list = service.findByHistory(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;
 	}
 	
 	@RequestMapping("findByHealing.do")
-	public ModelAndView findAllList_Healing() {
-		List<Tourlist> list = service.findByHealing();
+	public ModelAndView findAllList_Healing(Criteria cri) {
+		List<Tourlist> list = service.findByHealing(cri);
 		
 		ModelAndView modelAndView = new ModelAndView("gallery/list");
+		 PageMaker pageMaker = new PageMaker();
+		    pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(100);
+		    modelAndView.addObject("pageMaker", pageMaker);
 		modelAndView.addObject("Tourlist", list);
 		
 		return modelAndView;

@@ -11,6 +11,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import kr.co.wp.domain.Tourlist;
+import kr.co.wp.page.Criteria;
 import kr.co.wp.store.ListStore;
 import kr.co.wp.store.factory.ConnectionFactory;
 import kr.co.wp.store.factory.JdbcUtils;
@@ -267,10 +268,11 @@ public class ListStoreLogic implements ListStore {
 
 		return createdCount > 0;
 	}
-
+ 
 	@Override
-	public List<Tourlist> readBySeoul() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '서울'";
+	public List<Tourlist> readBySeoul(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '서울'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -305,8 +307,45 @@ public class ListStoreLogic implements ListStore {
 	}
 
 	@Override
-	public List<Tourlist> readByGyeonggi() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '경기'";
+	public List<Tourlist> readByGyeonggi(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '경기'"
+		+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
+		Connection conn = null;
+		Statement statement = null;
+		ResultSet rs = null;
+		List<Tourlist> lists = new ArrayList<Tourlist>();
+
+		try {
+			conn = connectionFactory.createConnection();
+			statement = conn.createStatement();
+			rs = statement.executeQuery(sql);
+			while (rs.next()) {
+				Tourlist list = new Tourlist();
+				list = new Tourlist();
+				list.setList_num(rs.getInt(1));
+				list.setUserid(rs.getString(2));
+				list.setTourimg(rs.getString(3));
+				list.setTour_areaname(rs.getString(4));
+				list.setTourname(rs.getString(5));
+				list.setTourLocation(rs.getString(6));
+				list.setTourstory(rs.getString(7));
+				list.setTourtype(rs.getString(8));
+				list.setTourRank(rs.getInt(9));
+				lists.add(list);
+			}
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		} finally {
+			JdbcUtils.Close(rs, statement, conn);
+		}
+
+		return lists;
+	}
+	
+	@Override
+	public List<Tourlist> readByIncheon(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '인천'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -341,8 +380,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByIncheon() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '인천'";
+	public List<Tourlist> readByGangwon(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '강원'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -377,8 +417,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByGangwon() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '강원'";
+	public List<Tourlist> readByChungbuk(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '충북' or areaname = '대전'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -413,8 +454,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByChungbuk() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '충북' or areaname = '대전'";
+	public List<Tourlist> readByChungnam(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '충남' or areaname = '세종'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -449,8 +491,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByChungnam() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '충남' or areaname = '세종'";
+	public List<Tourlist> readByBusan(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '부산'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -485,8 +528,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByBusan() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '부산'";
+	public List<Tourlist> readByGyeongbuk(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '경북' or areaname = '대구'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -521,8 +565,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByGyeongbuk() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '경북' or areaname = '대구'";
+	public List<Tourlist> readByGyeongnam(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '경남' or areaname = '울산'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -557,8 +602,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByGyeongnam() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '경남' or areaname = '울산'";
+	public List<Tourlist> readByJeonbuk(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '전북'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -593,8 +639,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByJeonbuk() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '전북'";
+	public List<Tourlist> readByJeonnam(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '전남' or areaname = '광주'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -629,8 +676,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByJeonnam() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '전남' or areaname = '광주'";
+	public List<Tourlist> readByJeju(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '제주'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -665,8 +713,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByJeju() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE areaname = '제주'";
+	public List<Tourlist> readByActivity(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'A'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -701,8 +750,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByActivity() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'A'";
+	public List<Tourlist> readByYolo(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'B'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -737,8 +787,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByYolo() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'B'";
+	public List<Tourlist> readByHistory(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'C'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;
@@ -773,44 +824,9 @@ public class ListStoreLogic implements ListStore {
 	}
 	
 	@Override
-	public List<Tourlist> readByHistory() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'C'";
-
-		Connection conn = null;
-		Statement statement = null;
-		ResultSet rs = null;
-		List<Tourlist> lists = new ArrayList<Tourlist>();
-
-		try {
-			conn = connectionFactory.createConnection();
-			statement = conn.createStatement();
-			rs = statement.executeQuery(sql);
-			while (rs.next()) {
-				Tourlist list = new Tourlist();
-				list = new Tourlist();
-				list.setList_num(rs.getInt(1));
-				list.setUserid(rs.getString(2));
-				list.setTourimg(rs.getString(3));
-				list.setTour_areaname(rs.getString(4));
-				list.setTourname(rs.getString(5));
-				list.setTourLocation(rs.getString(6));
-				list.setTourstory(rs.getString(7));
-				list.setTourtype(rs.getString(8));
-				list.setTourRank(rs.getInt(9));
-				lists.add(list);
-			}
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		} finally {
-			JdbcUtils.Close(rs, statement, conn);
-		}
-
-		return lists;
-	}
-	
-	@Override
-	public List<Tourlist> readByHealing() {
-		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'D'";
+	public List<Tourlist> readByHealing(Criteria cri) {
+		String sql = "SELECT list_num,user_id,list_img,areaname,list_name,arealocation,list_story,list_type, list_rank FROM project_list WHERE list_type = 'D'"
+				+ "LIMIT " + cri.getPageStart() + "," + cri.getPerPageNum();
 
 		Connection conn = null;
 		Statement statement = null;

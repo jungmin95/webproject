@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.wp.domain.Tourlist;
+import kr.co.wp.page.Criteria;
 import kr.co.wp.service.ListService;
 import kr.co.wp.store.ListStore;
 
@@ -57,99 +58,99 @@ public class ListServiceLogic implements ListService {
 	}
 
 	@Override
-	public List<Tourlist> findBySeoul() {
+	public List<Tourlist> findBySeoul(Criteria cri) {
 
-		return store.readBySeoul();
+		return store.readBySeoul(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByGyeonggi() {
+	public List<Tourlist> findByGyeonggi(Criteria cri) {
 
-		return store.readByGyeonggi();
+		return store.readByGyeonggi(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByIncheon() {
+	public List<Tourlist> findByIncheon(Criteria cri) {
 
-		return store.readByIncheon();
+		return store.readByIncheon(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByGangwon() {
+	public List<Tourlist> findByGangwon(Criteria cri) {
 
-		return store.readByGangwon();
+		return store.readByGangwon(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByChungbuk() {
+	public List<Tourlist> findByChungbuk(Criteria cri) {
 
-		return store.readByChungbuk();
+		return store.readByChungbuk(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByChungnam() {
+	public List<Tourlist> findByChungnam(Criteria cri) {
 
-		return store.readByChungnam();
+		return store.readByChungnam(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByBusan() {
+	public List<Tourlist> findByBusan(Criteria cri) {
 
-		return store.readByBusan();
+		return store.readByBusan(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByGyeongbuk() {
+	public List<Tourlist> findByGyeongbuk(Criteria cri) {
 
-		return store.readByGyeongbuk();
+		return store.readByGyeongbuk(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByGyeongnam() {
+	public List<Tourlist> findByGyeongnam(Criteria cri) {
 
-		return store.readByGyeongnam();
+		return store.readByGyeongnam(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByJeonbuk() {
+	public List<Tourlist> findByJeonbuk(Criteria cri) {
 
-		return store.readByJeonbuk();
+		return store.readByJeonbuk(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByJeonnam() {
+	public List<Tourlist> findByJeonnam(Criteria cri) {
 
-		return store.readByJeonnam();
+		return store.readByJeonnam(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByJeju() {
+	public List<Tourlist> findByJeju(Criteria cri) {
 
-		return store.readByJeju();
+		return store.readByJeju(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByActivity() {
+	public List<Tourlist> findByActivity(Criteria cri) {
 
-		return store.readByActivity();
+		return store.readByActivity(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByYolo() {
+	public List<Tourlist> findByYolo(Criteria cri) {
 
-		return store.readByYolo();
+		return store.readByYolo(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByHistory() {
+	public List<Tourlist> findByHistory(Criteria cri) {
 
-		return store.readByHistory();
+		return store.readByHistory(cri);
 	}
 
 	@Override
-	public List<Tourlist> findByHealing() {
+	public List<Tourlist> findByHealing(Criteria cri) {
 
-		return store.readByHealing();
+		return store.readByHealing(cri);
 	}
 	@Override
 	public List<Tourlist> findByActivity_9() {

@@ -362,7 +362,7 @@ table thead th {
 											<td colspan=3
 												style="border-color: #ddd; border-bottom-color: #414a60; border-bottom-width: 2px;">
 												<input name="tourimg" type="text" style="width: 100%; height: 26px;"  placeholder="이미지 이름" />
-												<input name="tourimg" type="file" style="width: 100%; height: 26px;" />
+												
 											</td>
 										</tr>
 									</tbody>

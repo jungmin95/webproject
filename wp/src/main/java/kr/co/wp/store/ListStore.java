@@ -4,6 +4,7 @@ import java.util.List;
 
 import kr.co.wp.domain.Tourlist;
 import kr.co.wp.domain.User;
+import kr.co.wp.page.Criteria;
 
 
 public interface ListStore {
@@ -12,22 +13,22 @@ public interface ListStore {
 	List<Tourlist> readByName(String list_name);
 	List<Tourlist> readAll();
 	List<Tourlist> Top10();
-	List<Tourlist> readBySeoul();
-	List<Tourlist> readByGyeonggi();
-	List<Tourlist> readByIncheon();
-	List<Tourlist> readByGangwon();
-	List<Tourlist> readByChungbuk();
-	List<Tourlist> readByChungnam();
-	List<Tourlist> readByBusan();
-	List<Tourlist> readByGyeongbuk();
-	List<Tourlist> readByGyeongnam();
-	List<Tourlist> readByJeonbuk();
-	List<Tourlist> readByJeonnam();
-	List<Tourlist> readByJeju();
-	List<Tourlist> readByActivity();
-	List<Tourlist> readByYolo();
-	List<Tourlist> readByHistory();
-	List<Tourlist> readByHealing();
+	List<Tourlist> readBySeoul(Criteria cri);
+	List<Tourlist> readByGyeonggi(Criteria cri);
+	List<Tourlist> readByIncheon(Criteria cri);
+	List<Tourlist> readByGangwon(Criteria cri);
+	List<Tourlist> readByChungbuk(Criteria cri);
+	List<Tourlist> readByChungnam(Criteria cri);
+	List<Tourlist> readByBusan(Criteria cri);
+	List<Tourlist> readByGyeongbuk(Criteria cri);
+	List<Tourlist> readByGyeongnam(Criteria cri);
+	List<Tourlist> readByJeonbuk(Criteria cri);
+	List<Tourlist> readByJeonnam(Criteria cri);
+	List<Tourlist> readByJeju(Criteria cri);
+	List<Tourlist> readByActivity(Criteria cri);
+	List<Tourlist> readByYolo(Criteria cri);
+	List<Tourlist> readByHistory(Criteria cri);
+	List<Tourlist> readByHealing(Criteria cri);
 	
 	List<Tourlist> readByActivity_9();
 	List<Tourlist> readByYolo_9();
