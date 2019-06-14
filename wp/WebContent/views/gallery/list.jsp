@@ -36,7 +36,15 @@
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
 display : block;
 max-width : 350px;
-height: auto;
+height: 300px;
+}
+
+.pagination{
+	display: inline-block;
+	padding-left: 0;
+	margin-left: 45%;
+	border-radius: 4px;
+
 }
 </style>
 </head>
@@ -181,7 +189,7 @@ height: auto;
  		<ul class="btn-group pagination">
     <c:if test="${pageMaker.prev }">
     <li>
-        <a href='<c:url value="/list/findbySeoul.do?page=${pageMaker.startPage-1 }"/>'><i class="fa fa-chevron-left"></i></a>
+        <a href='<c:url value="/list/findbySeoul.do?page=${pageMaker.startPage-1 }"/>'> << </a>
     </li>
     </c:if>
     <c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="idx">
@@ -191,7 +199,7 @@ height: auto;
     </c:forEach>
     <c:if test="${pageMaker.next && pageMaker.endPage >0 }">
     <li>
-        <a href='<c:url value="/list/findbySeoul.do?page=${pageMaker.endPage+1 }"/>'><i class="fa fa-chevron-right"></i></a>
+        <a href='<c:url value="/list/findbySeoul.do?page=${pageMaker.endPage+1 }"/>'>>></a>
     </li>
     </c:if>
 </ul>
